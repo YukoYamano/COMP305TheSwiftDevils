@@ -1,0 +1,1272 @@
+fileFormatVersion: 2
+guid: 754010fab86a31446a621bb24971d152
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6438959959175744944
+    second: Oli_Idel1
+  - first:
+      213: 482053036886262706
+    second: Oli_Idel2
+  - first:
+      213: 8337065767605563524
+    second: Oli_Idel3
+  - first:
+      213: 7547417184374615608
+    second: Oli_turn1
+  - first:
+      213: -3528723895404475613
+    second: Oli_turn2
+  - first:
+      213: -2210849857095316154
+    second: Oli_turn3
+  - first:
+      213: 8791564205374214281
+    second: Oli_walk1
+  - first:
+      213: 2802326033839858482
+    second: Oli_walk2
+  - first:
+      213: -5652804965570519355
+    second: Oli_walk3
+  - first:
+      213: 3570283787856538330
+    second: Oli_walk4
+  - first:
+      213: 989441982091391500
+    second: Oli_walk5
+  - first:
+      213: -492845268651706100
+    second: Oli_walk6
+  - first:
+      213: -2725287728733735234
+    second: Oli_run1
+  - first:
+      213: -4592534547314015125
+    second: Oli_run2
+  - first:
+      213: 2385250120034334390
+    second: Oli_run3
+  - first:
+      213: -1151552870061319588
+    second: Oli_run4
+  - first:
+      213: -8984540603486158227
+    second: Oli_run5
+  - first:
+      213: 4801366588490836665
+    second: Oli_run6
+  - first:
+      213: -7598249970970351539
+    second: Oli_hurt1
+  - first:
+      213: -1145464970009685966
+    second: Oli_hurt2
+  - first:
+      213: -4051674117227783613
+    second: Oli_hurt3
+  - first:
+      213: 767998580719147728
+    second: Oli_glide1
+  - first:
+      213: -3579120440133568302
+    second: Oli_glide2
+  - first:
+      213: -2559886306733417827
+    second: Oli_glide3
+  - first:
+      213: 9190417085017185228
+    second: Oli_glide4
+  - first:
+      213: -5486585363549651704
+    second: Oli_glide5
+  - first:
+      213: -7570888239994757412
+    second: Oli_glide6
+  - first:
+      213: -5870686662235094248
+    second: Oli_jump1
+  - first:
+      213: -4930737689018260606
+    second: Oli_jump2
+  - first:
+      213: 2953721729719067152
+    second: Oli_jump3
+  - first:
+      213: 2377261514885808857
+    second: Oli_jump4
+  - first:
+      213: -2934259603533990231
+    second: Oli_attack1
+  - first:
+      213: 440519011840499123
+    second: Oli_attack2
+  - first:
+      213: 7522475064161731034
+    second: Oli_attack3
+  - first:
+      213: -703093503045044
+    second: Oli_attack4
+  - first:
+      213: 6052894927001832042
+    second: Oli_fire1
+  - first:
+      213: 2066494493507377159
+    second: Oli_fire2
+  - first:
+      213: -285999097139475514
+    second: Oli_fire3
+  - first:
+      213: -1212628886387538528
+    second: Oli_fire4
+  - first:
+      213: -6726293208852472786
+    second: Oli_fire5
+  - first:
+      213: -8706202745936171275
+    second: Oli_fire6
+  - first:
+      213: 1655988738619126903
+    second: Oli_fire7
+  - first:
+      213: -5694267831839963998
+    second: Oli_fire8
+  - first:
+      213: -6714178393306831060
+    second: Oli_fire9
+  - first:
+      213: 6946251381927236884
+    second: Oli_fire10
+  - first:
+      213: -2241739297188481355
+    second: Oli_fire11
+  - first:
+      213: 7069971706994323456
+    second: OliSpriteSheet_46
+  - first:
+      213: 8612245523646125996
+    second: OliSpriteSheet_47
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Oli_Idel1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1386
+        width: 250
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bd42a1c7f7cb5950800000000000000
+      internalID: 6438959959175744944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_Idel2
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 1386
+        width: 254
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b3018adea890b600800000000000000
+      internalID: 482053036886262706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_Idel3
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 1386
+        width: 262
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 480f23bd42533b370800000000000000
+      internalID: 8337065767605563524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_turn1
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 1395
+        width: 274
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83ee356f0ffcdb860800000000000000
+      internalID: 7547417184374615608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_turn2
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 1410
+        width: 253
+        height: 438
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32bcbf72054770fc0800000000000000
+      internalID: -3528723895404475613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_turn3
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 1395
+        width: 265
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64d4c10c4cb7151e0800000000000000
+      internalID: -2210849857095316154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_walk1
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 1403
+        width: 292
+        height: 445
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9809e59a019e10a70800000000000000
+      internalID: 8791564205374214281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_walk2
+      rect:
+        serializedVersion: 2
+        x: 3738
+        y: 1403
+        width: 307
+        height: 445
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 233aadf2eacd3e620800000000000000
+      internalID: 2802326033839858482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_walk3
+      rect:
+        serializedVersion: 2
+        x: 4272
+        y: 1403
+        width: 294
+        height: 445
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ceda9a65d33d81b0800000000000000
+      internalID: -5652804965570519355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_walk4
+      rect:
+        serializedVersion: 2
+        x: 4806
+        y: 1413
+        width: 285
+        height: 435
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ada668a50323c8130800000000000000
+      internalID: 3570283787856538330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_walk5
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 1391
+        width: 313
+        height: 457
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c027a6c8d343bbd00800000000000000
+      internalID: 989441982091391500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_walk6
+      rect:
+        serializedVersion: 2
+        x: 5874
+        y: 1395
+        width: 310
+        height: 453
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0978c0e6df0929f0800000000000000
+      internalID: -492845268651706100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_run1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 943
+        width: 272
+        height: 443
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6381aff35dd2ad0800000000000000
+      internalID: -2725287728733735234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_run2
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 942
+        width: 234
+        height: 444
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6483a8592a0440c0800000000000000
+      internalID: -4592534547314015125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_run3
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 931
+        width: 281
+        height: 455
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6ba19b85c1a1120800000000000000
+      internalID: 2385250120034334390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_run4
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 920
+        width: 413
+        height: 466
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ad9ef04ccd400f0800000000000000
+      internalID: -1151552870061319588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_run5
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 928
+        width: 331
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d62422b5cef705380800000000000000
+      internalID: -8984540603486158227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_run6
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 924
+        width: 347
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9baec673971e1a240800000000000000
+      internalID: 4801366588490836665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_hurt1
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 931
+        width: 355
+        height: 455
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d48a0bd98e79d8690800000000000000
+      internalID: -7598249970970351539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_hurt2
+      rect:
+        serializedVersion: 2
+        x: 3738
+        y: 928
+        width: 311
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2305befbdad7a10f0800000000000000
+      internalID: -1145464970009685966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_hurt3
+      rect:
+        serializedVersion: 2
+        x: 4272
+        y: 928
+        width: 327
+        height: 458
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a5ef86bdf85c7c0800000000000000
+      internalID: -4051674117227783613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_glide1
+      rect:
+        serializedVersion: 2
+        x: 4806
+        y: 953
+        width: 247
+        height: 433
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dad4cfd3aa78aa00800000000000000
+      internalID: 767998580719147728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_glide2
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 972
+        width: 354
+        height: 414
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8bf753ce8645ec0800000000000000
+      internalID: -3579120440133568302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_glide3
+      rect:
+        serializedVersion: 2
+        x: 5878
+        y: 1054
+        width: 415
+        height: 332
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9a94c587f4797cd0800000000000000
+      internalID: -2559886306733417827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_glide4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 677
+        width: 398
+        height: 247
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb512a55abea8f70800000000000000
+      internalID: 9190417085017185228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_glide5
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 715
+        width: 429
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80df3c75eabbbd3b0800000000000000
+      internalID: -5486585363549651704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_glide6
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 710
+        width: 424
+        height: 214
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cde1eec024dcee690800000000000000
+      internalID: -7570888239994757412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_jump1
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 462
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8138addb591278ea0800000000000000
+      internalID: -5870686662235094248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_jump2
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 462
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283af6d2230829bb0800000000000000
+      internalID: -4930737689018260606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_jump3
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 462
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 012e141834abdf820800000000000000
+      internalID: 2953721729719067152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_jump4
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 462
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2c9f4a0cabdf020800000000000000
+      internalID: 2377261514885808857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_attack1
+      rect:
+        serializedVersion: 2
+        x: 3738
+        y: 462
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a6f39cdf6a6747d0800000000000000
+      internalID: -2934259603533990231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_attack2
+      rect:
+        serializedVersion: 2
+        x: 4272
+        y: 462
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd1f8115b90d1600800000000000000
+      internalID: 440519011840499123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_attack3
+      rect:
+        serializedVersion: 2
+        x: 4806
+        y: 462
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1081f0733356860800000000000000
+      internalID: 7522475064161731034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_attack4
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 462
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42d1894a808dfff0800000000000000
+      internalID: -703093503045044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire1
+      rect:
+        serializedVersion: 2
+        x: 5874
+        y: 462
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6a45b2ddd3300450800000000000000
+      internalID: 6052894927001832042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708dec70bc9adac10800000000000000
+      internalID: 2066494493507377159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire3
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb4be0265de70cf0800000000000000
+      internalID: -285999097139475514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire4
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a54e7ed370eb2fe0800000000000000
+      internalID: -1212628886387538528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire5
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2cd937c6f767a2a0800000000000000
+      internalID: -6726293208852472786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire6
+      rect:
+        serializedVersion: 2
+        x: 2136
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fea1f1eaba5d2780800000000000000
+      internalID: -8706202745936171275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire7
+      rect:
+        serializedVersion: 2
+        x: 2670
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774b075ebf04bf610800000000000000
+      internalID: 1655988738619126903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire8
+      rect:
+        serializedVersion: 2
+        x: 3204
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4ce339395e9f0b0800000000000000
+      internalID: -5694267831839963998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire9
+      rect:
+        serializedVersion: 2
+        x: 3738
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27e754135272d2a0800000000000000
+      internalID: -6714178393306831060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire10
+      rect:
+        serializedVersion: 2
+        x: 4272
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415d65c34da066060800000000000000
+      internalID: 6946251381927236884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oli_fire11
+      rect:
+        serializedVersion: 2
+        x: 4806
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6fb088cfdb3e0e0800000000000000
+      internalID: -2241739297188481355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OliSpriteSheet_46
+      rect:
+        serializedVersion: 2
+        x: 5340
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00075772fc59d1260800000000000000
+      internalID: 7069971706994323456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OliSpriteSheet_47
+      rect:
+        serializedVersion: 2
+        x: 5874
+        y: 0
+        width: 534
+        height: 462
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca710639ca7d48770800000000000000
+      internalID: 8612245523646125996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
