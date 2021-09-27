@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class CharacterMovement : MonoBehaviour
 {
-    private Rigidbody2D rigidbody2D;
+    Rigidbody2D rbody;
 
     public float horizForce;
     public float vertForce;
     // Start is called before the first frame update
     void Start()
     {
-        rigidbody2D = GetComponent < Rigidbody2D >();
+        rbody = GetComponent < Rigidbody2D >();
        
     }
 
@@ -25,7 +24,7 @@ public class CharacterMovement : MonoBehaviour
         float y = Input.GetAxisRaw("Jump");
 
         Vector2 movement = new Vector2(x * horizForce, y * vertForce);
-        rigidbody2D.AddForce(movement);
+        rbody.AddForce(movement);
 
 
     }
