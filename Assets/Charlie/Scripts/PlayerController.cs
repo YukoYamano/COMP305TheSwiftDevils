@@ -5,6 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] LayerMask platformLayer;
+    [SerializeField] GameObject stone;
+    [SerializeField] GameObject balloon;
+    [SerializeField] GameObject objSpawner;
 
     //for testing purposes only
     public bool isGrounded = false; //to see if player is on a surface (for jumping)
@@ -12,7 +15,9 @@ public class PlayerController : MonoBehaviour
     public bool isSprinting = false;    //to see if player is sprinting
     public int walkingSpeed = 5;
     public int runningSpeed = 10;
-    public int jumpForce = 3;
+    public int jumpForce = 4;
+    public bool isHoldingStone = false;
+    public bool isHoldingBalloon = false;
 
     //
     float extra = 0.01f;
@@ -31,7 +36,13 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+
+    }
+
+    private void Update()
+    {
         Jump();
+        CheckInput();
     }
 
     //Lateral Movement function
@@ -61,15 +72,17 @@ public class PlayerController : MonoBehaviour
 
     }
 
+
     void Jump()
     {
-        
+
         //Adding force to obj for jump
-        if (Input.GetKeyDown(KeyCode.Space) && CheckGrounded() == true)
+        if (Input.GetKeyDown(KeyCode.Space) && CheckGrounded())
         {
             rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
     }
+
 
     bool CheckGrounded()
     {
@@ -92,6 +105,51 @@ public class PlayerController : MonoBehaviour
         
         return isGrounded;
     }
+
+
+    // E hold stone, Q to hold balloon
+
+    private void CheckInput()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {    //mass + 0.5 if holding stone
+            if (isHoldingStone)
+            {
+                rbody.mass -= 0.5f;
+                Instantiate(stone, objSpawner.transform.position, Quaternion.identity);
+            }
+            else
+            {
+                rbody.mass += 0.5f;
+
+            }
+            isHoldingStone = !isHoldingStone;
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {    //mass - 0.5 if holding balloon
+            if (isHoldingBalloon)
+            {
+                rbody.mass += 0.5f;
+                Instantiate(balloon, objSpawner.transform.position, Quaternion.identity);
+
+            }
+            else
+            {
+                rbody.mass -= 0.5f;
+            }
+
+            isHoldingBalloon = !isHoldingBalloon;
+        }
+
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Instantiate(stone, objSpawner.transform.position, Quaternion.identity);
+        }
+
+
+    }
+
+    //instantiate object stone and balloon if F is pressed
 
 
 

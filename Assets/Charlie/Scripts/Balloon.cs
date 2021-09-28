@@ -12,7 +12,7 @@ public class Balloon : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         
     }
@@ -22,8 +22,8 @@ public class Balloon : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")){
 
-            collision.gameObject.GetComponent<Rigidbody2D>().mass -= massChange;
-            Destroy(this.gameObject);
+            //collision.gameObject.GetComponent<Rigidbody2D>().mass -= massChange;
+            //Destroy(this.gameObject);
         }
 
     }

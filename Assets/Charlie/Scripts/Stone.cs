@@ -24,8 +24,8 @@ public class Stone : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Rigidbody2D>().mass += massChange;
-            Destroy(this.gameObject);
+            //collision.gameObject.GetComponent<Rigidbody2D>().mass += massChange;
+            //Destroy(this.gameObject);
         }
     }
 

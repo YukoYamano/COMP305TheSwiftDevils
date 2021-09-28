@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2687940918131117096}
   - component: {fileID: 2687940918131117097}
   - component: {fileID: 2687940918131117098}
-  - component: {fileID: 791994081}
+  - component: {fileID: 1626608315}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -100,8 +100,8 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_AngularDrag: 0
+  m_GravityScale: -0.05
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -123,7 +123,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &791994081
+--- !u!114 &1626608315
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
