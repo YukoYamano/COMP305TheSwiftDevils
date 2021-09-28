@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class SignPost : MonoBehaviour
 {
-    public Text tutorial;
-    public Text controls1;
+    public Text prompt;
+    public Text instructions;
     public GameObject panel;
 
     // Start is called before the first frame update
     void Start()
     {
-        tutorial.enabled = false;
+        prompt.enabled = false;
 
         panel.SetActive(false);
-        controls1.enabled = false;
+        instructions.enabled = false;
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class SignPost : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            tutorial.enabled = true;
+            prompt.enabled = true;
 
 
 
@@ -46,7 +46,7 @@ public class SignPost : MonoBehaviour
             {
                 Debug.Log("Panel");
                 panel.SetActive(true);                
-                controls1.enabled = true;
+                instructions.enabled = true;
                 
             }
             //if (Input.GetAxis("Fire1") > 0)
@@ -65,10 +65,10 @@ public class SignPost : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        tutorial.enabled = false;
+        prompt.enabled = false;
         if(other.gameObject.CompareTag("Player"))
         {
-            controls1.enabled = false;
+            instructions.enabled = false;
             panel.SetActive(false);
         }
            
