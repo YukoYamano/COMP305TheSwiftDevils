@@ -63,5 +63,7 @@ sysinfo.txt
 crashlytics-build.properties
 
 #The UserSettings File
-**/UserSettings/EditorUserSettings.asset
+UserSettings/EditorUserSettings.asset
 
+
+UserSettings/
