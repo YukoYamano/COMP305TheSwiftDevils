@@ -54,7 +54,6 @@ public class Fan : MonoBehaviour
     {
         if (collision.CompareTag("Balloon"))
         {
-            Debug.Log("Trigger Enter Detected.");
             balloonRbody = collision.gameObject.GetComponent<Rigidbody2D>();
             applyingForce = true;
         }
