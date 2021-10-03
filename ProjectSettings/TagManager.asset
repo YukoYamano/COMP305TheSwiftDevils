@@ -4,12 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< Updated upstream
-  - Platform
-=======
   - MovingPlatform
   - Stone
->>>>>>> Stashed changes
   - Balloon
   layers:
   - Default
@@ -18,12 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-<<<<<<< Updated upstream
-  - Platforms
-=======
+  - MovingPlatform
   - Platform
->>>>>>> Stashed changes
-  - 
   - 
   - 
   - 

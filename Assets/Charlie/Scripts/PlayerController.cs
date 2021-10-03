@@ -112,6 +112,16 @@ public class PlayerController : MonoBehaviour
             0f,
             Vector2.down,
             extra, platformLayer);
+        //Check if player is on the Moving Platform
+        if (raycastHit.collider != null && raycastHit.collider.tag == "MovingPlatform")
+        {
+            transform.parent = raycastHit.transform;
+        }
+        else
+        {
+            transform.parent = null;
+        }
+
 
         if (raycastHit)
         {

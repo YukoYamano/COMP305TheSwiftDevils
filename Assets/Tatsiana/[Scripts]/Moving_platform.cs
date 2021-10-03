@@ -4,98 +4,90 @@ using UnityEngine;
 
 public class Moving_platform : MonoBehaviour
 {
-    //[Tooltip("This accesses the Player Controller Script, Place Character here.")]
-    public PlayerController playerController;
-    //[Tooltip("This accesses the Moving platform rigidbody 2D, Drag and drop the  here")]
-    //public Rigidbody2D platformRbody ;
-    public Collider2D movingPlatform;
+    [SerializeField] float offsetTop = 0, offsetBottom = 0, speed = 1;
+   // [SerializeField] bool hasReachedTop = false, hasReachedBottom = false;
+    Vector3 startPosition = Vector3.zero;
 
-    //    waterBase.isTrigger = false;
     private Rigidbody2D rbody;
-
-
+    private bool isMoveUp = false;
+    private bool isMoveDown = false;
+    private bool isMoveToStart  = false;
+    void Awake()
+    {
+        startPosition = transform.position;
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
-    // Update is called once per frame
-    void Update()
+    // 
+    void FixedUpdate()
     {
-
-        
-    }
-   
-    // Code for stone behaviour here
-    void OnCollisionStay2D(Collision2D other)
-        {
-        Debug.Log("collision");
-
-        if (other.gameObject.CompareTag("Player")&& other.gameObject.GetComponent<Rigidbody2D>().mass == 1.5)
-            {                  //platformRbody = GetComponent<Rigidbody2D>();
-                               // GetComponent<Collider2D>().isTrigger = true;
-                              Debug.Log("if collision");
-          rbody.transform.position = new Vector3(-5.5f, 2.0f, 0);
-            
-                        }
-            else if (other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<Rigidbody2D>().mass == 0.5)
-            { Debug.Log("else collision");
-                rbody.transform.position = new Vector3(-5.5f, transform.position.y + 2, 0);
-            
+        if (isMoveUp)
+        {   
+            Move(offsetTop);
+            isMoveUp = false;
         }
-        Debug.Log("nothing after collision");
 
-        //rbody.velocity = new Vector2(0, 0);
+        if (isMoveDown)
+        {
+             Move(offsetBottom);
+            isMoveDown = false;
+        }
 
+        if (isMoveToStart)
+        {
+            MoveToStart();
+            isMoveToStart = false;
+        }
     }
-    //private void OnTriggerStay2D(Collider2D other)
-    //{
-    //    if (other.CompareTag("MovingPlatform"))
-    //    {       
-    //            Debug.Log("Rise");
-    //            other.gameObject.GetComponent<Rigidbody2D>().transform.position = new Vector3(transform.position.x, transform.position.y + 2, 0);
-    //    }       
-    //}       
+
+    // Code for the Moving platform behaviour here
+    void OnCollisionStay2D(Collision2D other)
+        {Debug.Log("collision");
+                
+          if (other.gameObject.CompareTag("Player")&& other.gameObject.GetComponent<Rigidbody2D>().mass < 1.0)
+        {
+            Debug.Log("if collision");
+            isMoveUp = true; 
+        }
+        else if (other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<Rigidbody2D>().mass > 1.0)
+            { 
+            Debug.Log("else collision");
+            isMoveDown = true;
+        }else if (other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<Rigidbody2D>().mass == 1.0)
+        {
+            Debug.Log("mass=1");
+            isMoveToStart  = true;
+        }
+    }
+
+    void Move(float offset)
+    {
+        transform.position = Vector3.MoveTowards(transform.position,
+                                                 new Vector3(transform.position.x,
+                                                             startPosition.y + offset,
+                                                             transform.position.z),
+                                                 speed * Time.deltaTime);
+    }
+
+    void MoveToStart()
+    {
+        transform.position = Vector3.MoveTowards(transform.position,
+                                                 new Vector3(transform.position.x,
+                                                             startPosition.y,
+                                                             transform.position.z),
+                                                 speed * Time.deltaTime);
+    }
 }
-// Code for moving platform behaviour here
 
 
-// water puzzle
-//[Tooltip("This accesses the Player Controller Script, Place Character here.")]
-//public PlayerController playerController;
-
-//[Tooltip("This accesses the Water Base Tilemap Collider 2D, Drag and drop the Tilemap Collider 2D here")]
-//public Collider2D waterBase;
-
-//private GameObject player;
-//// Start is called before the first frame update
-//void Start()
-//{
-//    waterBase = GetComponent<Collider2D>();
-//    waterBase.isTrigger = false;
-//}
-
-//// Update is called once per frame
-//void Update()
-//{
-//    if (playerController.isHoldingStone == true)
-//    {
-//        waterBase.isTrigger = true;
-//        //Debug.Log("Trigger");
-//    }
-
-//}
-
-//private void OnTriggerStay2D(Collider2D other)
-//{
-//    if (other.CompareTag("Player") && playerController.isHoldingStone == false)
-//    {
-//        player = other.gameObject;
-//        player.GetComponent<Rigidbody2D>().gravityScale = -0.1f;
-//        //Debug.Log("Rise");
-//    }
-//}
 
 
-//}
+
+
+
+

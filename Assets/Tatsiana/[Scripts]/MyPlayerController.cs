@@ -9,33 +9,42 @@ public class MyPlayerController : MonoBehaviour
     [SerializeField] GameObject balloon;
     [SerializeField] GameObject objSpawner;
 
+   
+
     //for testing purposes only
     public bool isGrounded = false; //to see if player is on a surface (for jumping)
     public bool isFacingRight = false; //to see direction player is facing (for flipping sprites)
     public bool isSprinting = false;    //to see if player is sprinting
-    public int walkingSpeed = 5;
-    public int runningSpeed = 10;
-    public int jumpForce = 4;
+    public float walkingSpeed = 5f;
+    public float runningSpeed = 10f;
+    public float jumpForce = 3.5f;
     public bool isHoldingStone = false;
     public bool isHoldingBalloon = false;
 
-    //
+   
+    //additional distance to cast
     float extra = 0.01f;
 
     private Rigidbody2D rbody;
     private CapsuleCollider2D cCol;
+    private Animator animator;
 
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
         cCol = GetComponent<CapsuleCollider2D>();
+        animator = GetComponent<Animator>();
 
+   
     }
 
     // Fixed Update is called because physics calculations are required
     void FixedUpdate()
     {
         Move();
+        _ = CheckGrounded();
+
+
 
     }
 
@@ -43,12 +52,15 @@ public class MyPlayerController : MonoBehaviour
     {
         Jump();
         CheckInput();
+                
     }
 
     //Lateral Movement function
     void Move()
     {
         float x = Input.GetAxis("Horizontal");
+
+        animator.SetFloat("Walking", Mathf.Abs(x));
 
         //checks if the Shift key is being held down
         if (Input.GetKeyDown(KeyCode.LeftShift))
@@ -70,12 +82,23 @@ public class MyPlayerController : MonoBehaviour
             rbody.AddForce(new Vector3(x * walkingSpeed, 0, 0));
         }
 
+        //for turning
+        if (x > 0)
+        {
+            isFacingRight = true;
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        if (x < 0)
+        {
+            isFacingRight = false;
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
 
     void Jump()
     {
-
         //Adding force to obj for jump
         if (Input.GetKeyDown(KeyCode.Space) && CheckGrounded())
         {
@@ -94,13 +117,26 @@ public class MyPlayerController : MonoBehaviour
             Vector2.down,
             extra, platformLayer);
 
+        //Tatsiana's changes
+        if(raycastHit.collider != null && raycastHit.collider.tag =="MovingPlatform")
+        {
+            transform.parent = raycastHit.transform;
+        }
+        else
+        {
+            transform.parent = null;
+        }
+        //changes block is finished
+
         if (raycastHit)
         {
             isGrounded = true;
+            animator.SetBool("isJumping", false);
         }
         else
         {
             isGrounded = false;
+            animator.SetBool("isJumping", true);
         }
 
         return isGrounded;
@@ -146,11 +182,7 @@ public class MyPlayerController : MonoBehaviour
             Instantiate(stone, objSpawner.transform.position, Quaternion.identity);
         }
 
-
     }
-
-    //instantiate object stone and balloon if F is pressed
-
 
 
 
