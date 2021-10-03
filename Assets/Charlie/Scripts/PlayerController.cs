@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -79,17 +77,12 @@ public class PlayerController : MonoBehaviour
         }
 
         //for turning
-        if (x > 0)
+        if ((x < 0 && isFacingRight == false)||(x > 0 && isFacingRight == true))
         {
-            isFacingRight = true;
-            transform.localScale = new Vector3(1, 1, 1);
+            Turn();
         }
 
-        if (x < 0)
-        {
-            isFacingRight = false;
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
+
     }
 
 
@@ -102,6 +95,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void Turn()
+    {
+        isFacingRight = !isFacingRight;
+        transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
+    }
+
+
 
     bool CheckGrounded()
     {
@@ -113,8 +113,8 @@ public class PlayerController : MonoBehaviour
             Vector2.down,
             extra, platformLayer);
 
-        if(raycastHit) 
-        { 
+        if (raycastHit)
+        {
             isGrounded = true;
             animator.SetBool("isJumping", false);
         }
@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
             animator.SetBool("isJumping", true);
         }
-        
+
         return isGrounded;
     }
 
