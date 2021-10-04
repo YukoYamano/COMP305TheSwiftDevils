@@ -67,6 +67,7 @@ public class Fan : MonoBehaviour
             applyingForce = false;
         }
     }
+
 }
 
 

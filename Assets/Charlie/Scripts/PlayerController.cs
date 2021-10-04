@@ -172,10 +172,6 @@ public class PlayerController : MonoBehaviour
             isHoldingBalloon = !isHoldingBalloon;
         }
 
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            Instantiate(stone, objSpawner.transform.position, Quaternion.identity);
-        }
 
     }
 
