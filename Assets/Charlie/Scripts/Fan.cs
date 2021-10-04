@@ -17,11 +17,14 @@ public class Fan : MonoBehaviour
 
 
     private Rigidbody2D balloonRbody;
+    Animator anim;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponentInChildren<Animator>();
+
         //switches the direction of force being applied
         if(blowingRight)
         {
@@ -34,7 +37,6 @@ public class Fan : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (applyingForce)
@@ -42,6 +44,11 @@ public class Fan : MonoBehaviour
             AddForce(balloonRbody);
         }
 
+    }
+
+    private void Update()
+    {
+        UpdateAnimation();
     }
 
     private void AddForce(Rigidbody2D rbodyOther)
@@ -66,6 +73,16 @@ public class Fan : MonoBehaviour
         {
             applyingForce = false;
         }
+    }
+
+    //update animations depending on if boxcollider is active or not
+    public void UpdateAnimation()
+    {
+        if (GetComponent<BoxCollider2D>().enabled)
+        {
+            anim.SetBool("isBlowing", true);
+        }
+        else { anim.SetBool("isBlowing", false); }
     }
 
 }
