@@ -152,7 +152,7 @@ public class PlayerController : MonoBehaviour
             if (isHoldingStone)
             {
                 rbody.mass -= 0.5f;
-                Instantiate(stone, objSpawner.transform.position, Quaternion.identity);
+                Instantiate(stone, stoneSprite.transform.position, Quaternion.identity);
                 stoneSprite.SetActive(true);
             }
             else
@@ -168,7 +168,7 @@ public class PlayerController : MonoBehaviour
             if (isHoldingBalloon)
             {
                 rbody.mass += 0.5f;
-                Instantiate(balloon, objSpawner.transform.position, Quaternion.identity);
+                Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
 
 
             }
