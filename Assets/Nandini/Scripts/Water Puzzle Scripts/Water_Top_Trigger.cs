@@ -5,11 +5,14 @@ using UnityEngine;
 public class Water_Top_Trigger : MonoBehaviour
 {
     [Tooltip("This accesses the Water_Trigger Script, Place Water Base object here")]
-    public Water_Trigger Water_Trigger;
+    public GameObject Water_Base;
+
+    private Collider2D waterBaseCollider;
     // Start is called before the first frame update
     void Start()
     {
-        
+        waterBaseCollider = Water_Base.GetComponent<Collider2D>();
+        GetComponent<BoxCollider2D>().isTrigger = true;
     }
 
     // Update is called once per frame
@@ -20,11 +23,20 @@ public class Water_Top_Trigger : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && other.gameObject.GetComponent<Rigidbody2D>().mass<=1)
         {
             other.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.5f;
             //Debug.Log("Stop");
-            Water_Trigger.GetComponent<Collider2D>().isTrigger = false;
+            waterBaseCollider.isTrigger = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.CompareTag("Player") && other.gameObject.GetComponent<Rigidbody2D>().mass <= 1)
+        {
+            other.gameObject.GetComponent<Rigidbody2D>().gravityScale = 1f;
+            
         }
     }
 }
