@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Yuko/Scenes/AnimationScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Nandini/Scenes/Water Puzzle.unity
+    guid: 81d968ad35bf903498e563bb1ed4315d
   m_configObjects: {}
