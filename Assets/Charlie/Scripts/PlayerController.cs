@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] GameObject stone;
     [SerializeField] GameObject balloon;
     [SerializeField] GameObject objSpawner;
+    [SerializeField] GameObject balloonSprite;
+    [SerializeField] GameObject stoneSprite;
 
     //for testing purposes only
     public bool isGrounded = false; //to see if player is on a surface (for jumping)
@@ -16,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 3.5f;
     public bool isHoldingStone = false;
     public bool isHoldingBalloon = false;
+
 
     //additional distance to cast
     float extra = 0.01f;
@@ -29,6 +32,7 @@ public class PlayerController : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         cCol = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
+
     }
 
     // Fixed Update is called because physics calculations are required
@@ -45,6 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         Jump();
         CheckInput();
+        UpdateSprites();
 
 
     }
@@ -147,11 +152,13 @@ public class PlayerController : MonoBehaviour
             if (isHoldingStone)
             {
                 rbody.mass -= 0.5f;
-                Instantiate(stone, objSpawner.transform.position, Quaternion.identity);
+                Instantiate(stone, stoneSprite.transform.position, Quaternion.identity);
+                stoneSprite.SetActive(true);
             }
             else
             {
                 rbody.mass += 0.5f;
+                stoneSprite.SetActive(false);
 
             }
             isHoldingStone = !isHoldingStone;
@@ -161,18 +168,41 @@ public class PlayerController : MonoBehaviour
             if (isHoldingBalloon)
             {
                 rbody.mass += 0.5f;
-                Instantiate(balloon, objSpawner.transform.position, Quaternion.identity);
+                Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
+
 
             }
             else
             {
                 rbody.mass -= 0.5f;
+
             }
 
             isHoldingBalloon = !isHoldingBalloon;
         }
 
 
+    }
+
+    private void UpdateSprites()
+    {
+        if (isHoldingBalloon)
+        {
+            balloonSprite.SetActive(true);
+        }
+        else
+        {
+            balloonSprite.SetActive(false);
+        }
+
+        if (isHoldingStone)
+        {
+            stoneSprite.SetActive(true);
+        }
+        else
+        {
+            stoneSprite.SetActive(false);
+        }
     }
 
 }

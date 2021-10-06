@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1626608315}
   m_Layer: 0
   m_Name: Balloon
-  m_TagString: Untagged
+  m_TagString: Balloon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,11 +102,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: -0.05
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 31fe98ccddfb6f24193e3b46699929e6, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &2687940918131117098
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -122,7 +122,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.28716207
 --- !u!114 &1626608315
 MonoBehaviour:
   m_ObjectHideFlags: 0
