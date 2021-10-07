@@ -29,6 +29,7 @@ public class Door_Behaviour : MonoBehaviour
         if(other.CompareTag("Player") && Input.GetAxis("Fire1") > 0)
         {
             SceneManager.LoadScene("Water Puzzle");
+            //SceneManager.GetActiveScene().buildIndex + 1) --> Un-Comment this when build settings has all the scenes in order.
         }
     }
 }
