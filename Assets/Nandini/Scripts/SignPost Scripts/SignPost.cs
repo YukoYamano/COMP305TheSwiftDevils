@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class SignPost : MonoBehaviour
 {
-    public Text prompt;
+    public GameObject prompt;
     public Text instructions;
     public GameObject panel;
 
     // Start is called before the first frame update
     void Start()
     {
-        prompt.enabled = false;
+        prompt.GetComponent<MeshRenderer>().enabled = false;
 
         panel.SetActive(false);
         instructions.enabled = false;
@@ -29,7 +29,7 @@ public class SignPost : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            prompt.enabled = true;
+            prompt.GetComponent<MeshRenderer>().enabled = true;
 
 
 
@@ -65,8 +65,8 @@ public class SignPost : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        prompt.enabled = false;
-        if(other.gameObject.CompareTag("Player"))
+        prompt.GetComponent<MeshRenderer>().enabled = false;
+        if (other.gameObject.CompareTag("Player"))
         {
             instructions.enabled = false;
             panel.SetActive(false);
