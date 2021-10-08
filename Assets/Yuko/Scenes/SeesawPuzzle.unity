@@ -231,8 +231,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656703845}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -21.666895, y: -2.8327932, z: 95.29497}
-  m_LocalScale: {x: 3.7086885, y: 3.4024327, z: 1}
+  m_LocalPosition: {x: -17.2378, y: -1.1793, z: 95.29497}
+  m_LocalScale: {x: 4.6199365, y: 5.041182, z: 1}
   m_Children: []
   m_Father: {fileID: 338460613}
   m_RootOrder: 0
@@ -10663,11 +10663,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161066600407121238, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.3
+      value: 0.19
       objectReference: {fileID: 0}
     - target: {fileID: 9161066600407121238, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.76
+      value: 1.98
       objectReference: {fileID: 0}
     - target: {fileID: 9161066600407121238, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -10701,13 +10701,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9161066600407121239, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9161066600407121239, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -338738475
+      objectReference: {fileID: 0}
     - target: {fileID: 9161066601265965257, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9161066601265965259, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: orthographic size
-      value: 22.04
+      value: 16.23
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
