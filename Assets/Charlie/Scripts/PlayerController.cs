@@ -2,26 +2,29 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    
     [SerializeField] LayerMask platformLayer;
     [SerializeField] GameObject stone;
     [SerializeField] GameObject balloon;
-    [SerializeField] GameObject objSpawner;
+    [SerializeField] GameObject groundCheck;
     [SerializeField] GameObject balloonSprite;
     [SerializeField] GameObject stoneSprite;
 
     //for testing purposes only
     public bool isGrounded = false; //to see if player is on a surface (for jumping)
+    public bool onPlatform = false; //flag to see if player is on a platform
     public bool isFacingRight = false; //to see direction player is facing (for flipping sprites)
-    public bool isSprinting = false;    //to see if player is sprinting
-    public float walkingSpeed = 5f;
-    public float runningSpeed = 10f;
-    public float jumpForce = 3.5f;
-    public bool isHoldingStone = false;
-    public bool isHoldingBalloon = false;
+    public float moveSpeed = 5f; //movespeed
+    public float jumpForce = 3.5f; //regular jump
+    public const float massChange = 0.25f; //mass change when picking up stone or balloon
+    public bool isHoldingStone = false; //true when holding stone
+    public bool isHoldingBalloon = false; //true when holding balloon
+    public float fallMultiplier = 3.0f; //higher grav when falling,
+    public float lowJumpMultiplier = 2.5f; //grav multiplier 
 
 
     //additional distance to cast
-    float extra = 0.01f;
+    float extra = 0.1f;
 
     private Rigidbody2D rbody;
     private CapsuleCollider2D cCol;
@@ -32,14 +35,13 @@ public class PlayerController : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         cCol = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
-
     }
 
     // Fixed Update is called because physics calculations are required
     void FixedUpdate()
     {
         Move();
-        _ = CheckGrounded();
+       
 
 
 
@@ -47,9 +49,11 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        CheckGrounded();
         Jump();
         CheckInput();
         UpdateSprites();
+        
 
 
     }
@@ -61,25 +65,9 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("Walking", Mathf.Abs(x));
 
-        //checks if the Shift key is being held down
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            isSprinting = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            isSprinting = false;
-        }
+        //moves the character left and right using add force
+        rbody.AddForce(new Vector3(x * moveSpeed, 0, 0));
 
-
-        if (isSprinting)
-        {
-            rbody.AddForce(new Vector3(x * runningSpeed, 0, 0));
-        }
-        else
-        {
-            rbody.AddForce(new Vector3(x * walkingSpeed, 0, 0));
-        }
 
         //for turning
         if ((x < 0 && isFacingRight == false)||(x > 0 && isFacingRight == true))
@@ -90,16 +78,6 @@ public class PlayerController : MonoBehaviour
 
     }
 
-
-    void Jump()
-    {
-        //Adding force to obj for jump
-        if (Input.GetKeyDown(KeyCode.Space) && CheckGrounded())
-        {
-            rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        }
-    }
-
     void Turn()
     {
         isFacingRight = !isFacingRight;
@@ -107,9 +85,51 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
-    bool CheckGrounded()
+    void Jump()
     {
+        //Adding force to obj for jump
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+            rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+        }
+
+        if (rbody.velocity.y < 0) //when falling, applies a grav multiplier in order to fall faster
+        {
+            rbody.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (rbody.velocity.y > 0 && Input.GetButton("Jump") == false) //if rising, but Jump key is released 'early' (before apex of jump), apply a slightly lower grav muliplier
+        {
+            rbody.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
+
+    }
+
+
+
+
+    void CheckGrounded()
+    {
+        //
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.transform.position, extra, platformLayer);
+        if(colliders.Length > 0)
+        {
+            isGrounded = true;
+            animator.SetBool("isJumping", false);
+        }
+        else
+        {
+            isGrounded =false;
+            animator.SetBool("isJumping", true);
+        }
+
+        //foreach (Collider2D c in colliders)
+        //{
+        //    if (c.tag == "MovingPlatform")
+        //    {
+        //        onPlatform = true;
+        //    }
+        //}
+
         //using a box collider to check means that I can jump repeatedly if next to a wall...
         RaycastHit2D raycastHit = Physics2D.BoxCast(
             cCol.bounds.center,
@@ -117,6 +137,7 @@ public class PlayerController : MonoBehaviour
             0f,
             Vector2.down,
             extra, platformLayer);
+
         //Check if player is on the Moving Platform
         if (raycastHit.collider != null && raycastHit.collider.tag == "MovingPlatform")
         {
@@ -128,22 +149,18 @@ public class PlayerController : MonoBehaviour
         }
 
 
-        if (raycastHit)
-        {
-            isGrounded = true;
-            animator.SetBool("isJumping", false);
-        }
-        else
-        {
-            isGrounded = false;
-            animator.SetBool("isJumping", true);
-        }
-
-        return isGrounded;
+        //if (raycastHit)
+        //{
+            
+        //}
+        //else
+        //{
+            
+        //}
     }
 
 
-    // E hold stone, Q to hold balloon
+    // E hold stone, Q to hold balloon, press respective button to 'drop' the item
 
     private void CheckInput()
     {
@@ -151,13 +168,13 @@ public class PlayerController : MonoBehaviour
         {    //mass + 0.5 if holding stone
             if (isHoldingStone)
             {
-                rbody.mass -= 0.5f;
+                rbody.mass -= massChange;
                 Instantiate(stone, stoneSprite.transform.position, Quaternion.identity);
                 stoneSprite.SetActive(true);
             }
             else
             {
-                rbody.mass += 0.5f;
+                rbody.mass += massChange;
                 stoneSprite.SetActive(false);
 
             }
@@ -167,14 +184,14 @@ public class PlayerController : MonoBehaviour
         {    //mass - 0.5 if holding balloon
             if (isHoldingBalloon)
             {
-                rbody.mass += 0.5f;
+                rbody.mass += massChange;
                 Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
 
 
             }
             else
             {
-                rbody.mass -= 0.5f;
+                rbody.mass -= massChange;
 
             }
 
