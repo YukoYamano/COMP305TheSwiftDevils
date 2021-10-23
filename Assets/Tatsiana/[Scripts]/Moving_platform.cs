@@ -12,8 +12,9 @@ public class Moving_platform : MonoBehaviour
     private bool isMoveUp = false;
     private bool isMoveDown = false;
     private bool isMoveToStart  = false;
-    private static float massOnthePlatform =0;
-    private static float stoneOnthePlatform =0;
+    
+    private float massOnthePlatform;
+    private float  stoneOnthePlatform;
 
     void Awake()
     {
@@ -50,23 +51,28 @@ public class Moving_platform : MonoBehaviour
 
     // Code for the Moving platform behaviour here
     void OnCollisionStay2D(Collision2D other) 
-    { 
-        if (other.gameObject.CompareTag("Player"))
-        {
-            if (other.gameObject.CompareTag("Stone"))
+    {
+        massOnthePlatform = 0;
+
+        if (other.gameObject.CompareTag("Stone"))
             {
-                stoneOnthePlatform += 0.5f;
+            stoneOnthePlatform = 1.5f;
             }
             else
             {
-                stoneOnthePlatform = 0f;
+            stoneOnthePlatform = 0f; 
             }
-            
-            massOnthePlatform =stoneOnthePlatform + other.gameObject.GetComponent<Rigidbody2D>().mass;
+        massOnthePlatform = stoneOnthePlatform;
+      //  Debug.Log($"massOnthePlatform = stoneOnthePlatform = {massOnthePlatform}");
+        
+        if (other.gameObject.CompareTag("Player"))
+        {
+            massOnthePlatform = stoneOnthePlatform + other.gameObject.GetComponent<Rigidbody2D>().mass;
+       //     Debug.Log($"mass on the platform with player = { massOnthePlatform}");
         }
         else
         {
-            massOnthePlatform = 1.0f;
+            massOnthePlatform = stoneOnthePlatform;
         }
             
          if(massOnthePlatform < 1.0f)
