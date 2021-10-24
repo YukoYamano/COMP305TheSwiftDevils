@@ -7,13 +7,13 @@ public class Stone_controller : MonoBehaviour
     [SerializeField] LayerMask platformLayer;
     //additional distance to cast
     float extra = 0.01f;
-    public bool isOnthePlatform = false;
-    private CapsuleCollider2D boxCol;
+    //public bool isOnthePlatform = false;
+    private BoxCollider2D boxCol;
 
     // Start is called before the first frame update
     void Start()
     {
-        boxCol = GetComponent<CapsuleCollider2D>();
+        boxCol = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class Stone_controller : MonoBehaviour
 
     void CheckOnPlatform()
     {
-        //
+
         RaycastHit2D raycastHit = Physics2D.BoxCast(
             boxCol.bounds.center,
             boxCol.bounds.size,
@@ -46,6 +46,6 @@ public class Stone_controller : MonoBehaviour
         {
             transform.parent = null;
         }
-      
+
     }
 }

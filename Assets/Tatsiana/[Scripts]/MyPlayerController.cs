@@ -8,8 +8,11 @@ public class MyPlayerController : MonoBehaviour
     [SerializeField] GameObject stone;
     [SerializeField] GameObject balloon;
     [SerializeField] GameObject objSpawner;
+    private bool isOntheIce =false;
+    private float facingCoefficient;
+    public float glidingSpeed =3f;
 
-   
+
 
     //for testing purposes only
     public bool isGrounded = false; //to see if player is on a surface (for jumping)
