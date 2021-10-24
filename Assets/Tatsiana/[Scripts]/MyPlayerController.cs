@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MyPlayerController : MonoBehaviour
@@ -6,8 +8,8 @@ public class MyPlayerController : MonoBehaviour
     [SerializeField] GameObject stone;
     [SerializeField] GameObject balloon;
     [SerializeField] GameObject objSpawner;
-    [SerializeField] GameObject balloonSprite;
-    [SerializeField] GameObject stoneSprite;
+
+   
 
     //for testing purposes only
     public bool isGrounded = false; //to see if player is on a surface (for jumping)
@@ -19,7 +21,7 @@ public class MyPlayerController : MonoBehaviour
     public bool isHoldingStone = false;
     public bool isHoldingBalloon = false;
 
-
+   
     //additional distance to cast
     float extra = 0.01f;
 
@@ -33,32 +35,24 @@ public class MyPlayerController : MonoBehaviour
         cCol = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
 
+   
     }
 
-    
-// Fixed Update is called because physics calculations are required
-void FixedUpdate()
+    // Fixed Update is called because physics calculations are required
+    void FixedUpdate()
     {
-               
-        if (isOntheIce)
-        {
-            Glide();
-            animator.SetBool("isGliding", true);
-            isOntheIce = false;
-        }
-        else
-        {
-        animator.SetBool("isGliding", false);
         Move();
-         _ = CheckGrounded();
-        }
+        _ = CheckGrounded();
+
+
+
     }
 
     private void Update()
     {
         Jump();
         CheckInput();
-        UpdateSprites();
+                
     }
 
     //Lateral Movement function
@@ -89,12 +83,17 @@ void FixedUpdate()
         }
 
         //for turning
-        if ((x < 0 && isFacingRight == false) || (x > 0 && isFacingRight == true))
+        if (x > 0)
         {
-            Turn();
+            isFacingRight = true;
+            transform.localScale = new Vector3(1, 1, 1);
         }
 
-
+        if (x < 0)
+        {
+            isFacingRight = false;
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
     }
 
 
@@ -107,13 +106,6 @@ void FixedUpdate()
         }
     }
 
-    void Turn()
-    {
-        isFacingRight = !isFacingRight;
-        transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
-    }
-
-
 
     bool CheckGrounded()
     {
@@ -125,9 +117,8 @@ void FixedUpdate()
             Vector2.down,
             extra, platformLayer);
 
-
-        //Check if player is on the Moving Platform
-        if (raycastHit.collider != null && raycastHit.collider.tag == "MovingPlatform")
+        //Tatsiana's changes
+        if(raycastHit.collider != null && raycastHit.collider.tag =="MovingPlatform")
         {
             transform.parent = raycastHit.transform;
         }
@@ -135,7 +126,7 @@ void FixedUpdate()
         {
             transform.parent = null;
         }
-
+        //changes block is finished
 
         if (raycastHit)
         {
@@ -161,13 +152,11 @@ void FixedUpdate()
             if (isHoldingStone)
             {
                 rbody.mass -= 0.5f;
-                Instantiate(stone, stoneSprite.transform.position, Quaternion.identity);
-                stoneSprite.SetActive(true);
+                Instantiate(stone, objSpawner.transform.position, Quaternion.identity);
             }
             else
             {
                 rbody.mass += 0.5f;
-                stoneSprite.SetActive(false);
 
             }
             isHoldingStone = !isHoldingStone;
@@ -177,49 +166,24 @@ void FixedUpdate()
             if (isHoldingBalloon)
             {
                 rbody.mass += 0.5f;
-                Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
-
+                Instantiate(balloon, objSpawner.transform.position, Quaternion.identity);
 
             }
             else
             {
                 rbody.mass -= 0.5f;
-
             }
 
             isHoldingBalloon = !isHoldingBalloon;
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Instantiate(stone, objSpawner.transform.position, Quaternion.identity);
+        }
 
     }
 
-    private void UpdateSprites()
-    {
-        if (isHoldingBalloon)
-        {
-            balloonSprite.SetActive(true);
-        }
-        else
-        {
-            balloonSprite.SetActive(false);
-        }
-
-        if (isHoldingStone)
-        {
-            stoneSprite.SetActive(true);
-        }
-        else
-        {
-            stoneSprite.SetActive(false);
-        }
-    }
-
-    // Tatsiana's Glide level
-    // 
-    
-    private bool isOntheIce =false;  // to check if Player is on the ice
-    public float glidingSpeed;
-    private float facingCoefficient;
 
     void OnCollisionStay2D(Collision2D other)
     {

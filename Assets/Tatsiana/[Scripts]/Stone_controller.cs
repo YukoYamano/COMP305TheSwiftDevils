@@ -8,12 +8,12 @@ public class Stone_controller : MonoBehaviour
     //additional distance to cast
     float extra = 0.01f;
     public bool isOnthePlatform = false;
-    private BoxCollider2D boxCol;
+    private CapsuleCollider2D boxCol;
 
     // Start is called before the first frame update
     void Start()
     {
-        boxCol = GetComponent<BoxCollider2D>();
+        boxCol = GetComponent<CapsuleCollider2D>();
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class Stone_controller : MonoBehaviour
 
     void CheckOnPlatform()
     {
-        
+        //
         RaycastHit2D raycastHit = Physics2D.BoxCast(
             boxCol.bounds.center,
             boxCol.bounds.size,
