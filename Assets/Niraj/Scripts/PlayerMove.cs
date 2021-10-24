@@ -1,13 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class MyPlayerController : MonoBehaviour
+public class PlayerMove : MonoBehaviour
 {
+    
+
+    
     [SerializeField] LayerMask platformLayer;
     [SerializeField] GameObject stone;
     [SerializeField] GameObject balloon;
     [SerializeField] GameObject objSpawner;
-    [SerializeField] GameObject balloonSprite;
-    [SerializeField] GameObject stoneSprite;
 
     //for testing purposes only
     public bool isGrounded = false; //to see if player is on a surface (for jumping)
@@ -19,7 +22,6 @@ public class MyPlayerController : MonoBehaviour
     public bool isHoldingStone = false;
     public bool isHoldingBalloon = false;
 
-
     //additional distance to cast
     float extra = 0.01f;
 
@@ -27,6 +29,7 @@ public class MyPlayerController : MonoBehaviour
     private CapsuleCollider2D cCol;
     private Animator animator;
 
+    // Start is called before the first frame update
     void Start()
     {
         rbody = GetComponent<Rigidbody2D>();
@@ -34,37 +37,31 @@ public class MyPlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
 
     }
-
-    
-// Fixed Update is called because physics calculations are required
-void FixedUpdate()
+    void FixedUpdate()
     {
-               
-        if (isOntheIce)
-        {
-            Glide();
-            animator.SetBool("isGliding", true);
-            isOntheIce = false;
-        }
-        else
-        {
-        animator.SetBool("isGliding", false);
-        Move();
-         _ = CheckGrounded();
-        }
+        //Move();
+        _ = CheckGrounded();
+
+
+
     }
 
-    private void Update()
+    // Update is called once per frame
+    void Update()
     {
-        Jump();
-        CheckInput();
-        UpdateSprites();
-    }
+        //movement left and right
+        float x = Input.GetAxisRaw("Horizontal");
+        //movement Jump
+        float y = Input.GetAxisRaw("Jump");
 
-    //Lateral Movement function
-    void Move()
+        Vector2 movement = new Vector2(x * walkingSpeed, y * jumpForce);
+        rbody.AddForce(movement);
+
+
+    }
+    /*void Move()
     {
-        float x = Input.GetAxis("Horizontal");
+        //float x = Input.GetAxis("Horizontal");
 
         animator.SetFloat("Walking", Mathf.Abs(x));
 
@@ -95,26 +92,12 @@ void FixedUpdate()
         }
 
 
-    }
-
-
-    void Jump()
-    {
-        //Adding force to obj for jump
-        if (Input.GetKeyDown(KeyCode.Space) && CheckGrounded())
-        {
-            rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        }
-    }
-
+    }*/
     void Turn()
     {
         isFacingRight = !isFacingRight;
         transform.localScale = new Vector3(transform.localScale.x * -1f, transform.localScale.y, transform.localScale.z);
     }
-
-
-
     bool CheckGrounded()
     {
         //using a box collider to check means that I can jump repeatedly if next to a wall...
@@ -124,18 +107,6 @@ void FixedUpdate()
             0f,
             Vector2.down,
             extra, platformLayer);
-
-
-        //Check if player is on the Moving Platform
-        if (raycastHit.collider != null && raycastHit.collider.tag == "MovingPlatform")
-        {
-            transform.parent = raycastHit.transform;
-        }
-        else
-        {
-            transform.parent = null;
-        }
-
 
         if (raycastHit)
         {
@@ -150,10 +121,6 @@ void FixedUpdate()
 
         return isGrounded;
     }
-
-
-    // E hold stone, Q to hold balloon
-
     private void CheckInput()
     {
         if (Input.GetKeyDown(KeyCode.E))
@@ -161,13 +128,11 @@ void FixedUpdate()
             if (isHoldingStone)
             {
                 rbody.mass -= 0.5f;
-                Instantiate(stone, stoneSprite.transform.position, Quaternion.identity);
-                stoneSprite.SetActive(true);
+                Instantiate(stone, objSpawner.transform.position, Quaternion.identity);
             }
             else
             {
                 rbody.mass += 0.5f;
-                stoneSprite.SetActive(false);
 
             }
             isHoldingStone = !isHoldingStone;
@@ -177,75 +142,21 @@ void FixedUpdate()
             if (isHoldingBalloon)
             {
                 rbody.mass += 0.5f;
-                Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
-
+                Instantiate(balloon, objSpawner.transform.position, Quaternion.identity);
 
             }
             else
             {
                 rbody.mass -= 0.5f;
-
             }
 
             isHoldingBalloon = !isHoldingBalloon;
         }
 
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Instantiate(stone, objSpawner.transform.position, Quaternion.identity);
+        }
 
     }
-
-    private void UpdateSprites()
-    {
-        if (isHoldingBalloon)
-        {
-            balloonSprite.SetActive(true);
-        }
-        else
-        {
-            balloonSprite.SetActive(false);
-        }
-
-        if (isHoldingStone)
-        {
-            stoneSprite.SetActive(true);
-        }
-        else
-        {
-            stoneSprite.SetActive(false);
-        }
-    }
-
-    // Tatsiana's Glide level
-    // 
-    
-    private bool isOntheIce =false;  // to check if Player is on the ice
-    public float glidingSpeed;
-    private float facingCoefficient;
-
-    void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ice"))
-        {
-            isOntheIce = true;
-          
-        }
-        isOntheIce = false;
-
-    }
-    void Glide()
-    {
-        if(gameObject.GetComponent<Transform>().localScale == new Vector3(1.5f, 1.5f, 10f))
-        {
-            facingCoefficient = 1;
-        }
-        else if (gameObject.GetComponent<Transform>().localScale == new Vector3(-1.5f, 1.5f, 10f))
-        {
-            facingCoefficient = -1;
-        }
-            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 0f) * facingCoefficient * glidingSpeed;
-        
-    }
-
-
-
-
 }
