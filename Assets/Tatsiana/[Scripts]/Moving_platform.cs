@@ -4,20 +4,24 @@ using UnityEngine;
 
 public class Moving_platform : MonoBehaviour
 {
-    [SerializeField] float offsetTop = 0, offsetBottom = 0, speed = 1;
-   // [SerializeField] bool hasReachedTop = false, hasReachedBottom = false;
-    Vector3 startPosition = Vector3.zero;
+    [SerializeField] float speed = 1;
+    [SerializeField] GameObject topLimit, bottomLimit;
+    // [SerializeField] bool hasReachedTop = false, hasReachedBottom = false;
+    Vector3 startPosition, topPosition, bottomPosition;
 
-    private Rigidbody2D rbody;
+   
     private bool isMoveUp = false;
     private bool isMoveDown = false;
     private bool isMoveToStart  = false;
-    private static float massOnthePlatform =0;
-    private static float stoneOnthePlatform =0;
+    
+    private  float massOnthePlatform;
+    private bool isStoneOnthePlatform = false;
 
     void Awake()
     {
         startPosition = transform.position;
+        topPosition = topLimit.transform.position;
+        bottomPosition = bottomLimit.transform.position;
     }
     
     // Start is called before the first frame update
@@ -29,65 +33,103 @@ public class Moving_platform : MonoBehaviour
     // 
     void FixedUpdate()
     {
-        if (isMoveUp)
-        {   
-            Move(offsetTop);
-            isMoveUp = false;
-        }
 
-        if (isMoveDown)
+        if (isStoneOnthePlatform)
         {
-             Move(offsetBottom);
-            isMoveDown = false;
+            if (isMoveUp)  //if there are stone + player with balloon on the platform => weight =1 =>platform moves to initial position
+            {
+                Debug.Log($"moveUp  = { isMoveUp}");
+                MoveToStart();
+                isMoveToStart = false;
+                
+            }
+            else   // in other cases if stone is on the platform, the platform moves down
+            {
+                Debug.Log($"moveUp  = { isMoveUp}");
+                MoveDown();       
+                isMoveDown = false;
+                
+            }
+            isStoneOnthePlatform = false;
         }
-
-        if (isMoveToStart)
+        else
         {
-            MoveToStart();
-            isMoveToStart = false;
+
+            if (isMoveUp)
+            {
+                MoveUp();
+                isMoveUp = false;
+            }
+
+            if (isMoveDown)
+            {
+                MoveDown();
+                isMoveDown = false;
+            }
+
+            if (isMoveToStart)
+            {
+                MoveToStart();
+                isMoveToStart = false;
+            }
         }
     }
 
     // Code for the Moving platform behaviour here
-    void OnCollisionStay2D(Collision2D other) 
-    { 
-        if (other.gameObject.CompareTag("Player"))
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        
+          //check if stone is on the platform
+     if (other.gameObject.CompareTag("Stone"))
         {
-            if (other.gameObject.CompareTag("Stone"))
-            {
-                stoneOnthePlatform += 0.5f;
-            }
-            else
-            {
-                stoneOnthePlatform = 0f;
-            }
-            
-            massOnthePlatform =stoneOnthePlatform + other.gameObject.GetComponent<Rigidbody2D>().mass;
-        }
+          isStoneOnthePlatform = true;
+         }
         else
         {
-            massOnthePlatform = 1.0f;
+            isStoneOnthePlatform = false;
         }
-            
-         if(massOnthePlatform < 1.0f)
-        { 
-          isMoveUp = true; 
-        }
-        else if (massOnthePlatform > 1.0f)
-        { 
-         isMoveDown = true;
-        }
-        else if (massOnthePlatform == 1.0f)
+        Debug.Log($"stone on the platform  = { isStoneOnthePlatform}");
+
+        //check player weight on the platform
+         massOnthePlatform = 1;
+
+         if (other.gameObject.CompareTag("Player"))
         {
-            isMoveToStart  = true;
+            massOnthePlatform = other.gameObject.GetComponent<Rigidbody2D>().mass;
+           
         }
+
+        if (massOnthePlatform < 1.0f) //player with balloon
+        {
+            isMoveUp = true;
+        }
+        else if (massOnthePlatform > 1.0f)  //player with stone
+        {
+            isMoveDown = true;
+        }
+        else if (massOnthePlatform == 1.0f) //player without anything (or have stone & balloon)
+        {
+            isMoveToStart = true;
+        }
+
     }
 
-    void Move(float offset)
+
+    void MoveUp()
     {
         transform.position = Vector3.MoveTowards(transform.position,
                                                  new Vector3(transform.position.x,
-                                                             startPosition.y + offset,
+                                                             topPosition.y -0.33f,
+                                                             transform.position.z),
+                                                 speed * Time.deltaTime);
+    }
+
+    void MoveDown()
+    {
+        transform.position = Vector3.MoveTowards(transform.position,
+                                                 new Vector3(transform.position.x,
+                                                             bottomPosition.y - 0.33f,   //0.33f  is adjusment because of offset of platform sprite
                                                              transform.position.z),
                                                  speed * Time.deltaTime);
     }
@@ -98,94 +140,8 @@ public class Moving_platform : MonoBehaviour
                                                  new Vector3(transform.position.x,
                                                              startPosition.y,
                                                              transform.position.z),
-     
-                                                 
                                                  speed * Time.deltaTime);
     }
-
-
-    //CODE FOR THE STONE ON THE PLATFORM
-    //[SerializeField] float offsetTop = 0, offsetBottom = 0, speed = 1;
-    //// [SerializeField] bool hasReachedTop = false, hasReachedBottom = false;
-    //Vector3 startPosition = Vector3.zero;
-
-    //private Rigidbody2D rbody;
-    //private bool isMoveUp = false;
-    //private bool isMoveDown = false;
-    //private bool isMoveToStart = false;
-    //void Awake()
-    //{
-    //    startPosition = transform.position;
-    //}
-
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-
-    //}
-
-    //// 
-    //void FixedUpdate()
-    //{
-    //    if (isMoveUp)
-    //    {
-    //        Move(offsetTop);
-    //        isMoveUp = false;
-    //    }
-
-    //    if (isMoveDown)
-    //    {
-    //        Move(offsetBottom);
-    //        isMoveDown = false;
-    //    }
-
-    //    if (isMoveToStart)
-    //    {
-    //        MoveToStart();
-    //        isMoveToStart = false;
-    //    }
-    //}
-
-    //// Code for the Moving platform behaviour here
-    //void OnCollisionStay2D(Collision2D other)
-    //{
-    //    Debug.Log("collision");
-
-    //    if (other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<Rigidbody2D>().mass < 1.0)
-    //    {
-    //        Debug.Log("if collision");
-    //        isMoveUp = true;
-    //    }
-    //    else if (other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<Rigidbody2D>().mass > 1.0)
-    //    {
-    //        Debug.Log("else collision");
-    //        isMoveDown = true;
-    //    }
-    //    else if (other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<Rigidbody2D>().mass == 1.0)
-    //    {
-    //        Debug.Log("mass=1");
-    //        isMoveToStart = true;
-    //    }
-    //}
-
-    //void Move(float offset)
-    //{
-    //    transform.position = Vector3.MoveTowards(transform.position,
-    //                                             new Vector3(transform.position.x,
-    //                                                         startPosition.y + offset,
-    //                                                         transform.position.z),
-    //                                             speed * Time.deltaTime);
-    //}
-
-    //void MoveToStart()
-    //{
-    //    transform.position = Vector3.MoveTowards(transform.position,
-    //                                             new Vector3(transform.position.x,
-    //                                                         startPosition.y,
-    //                                                         transform.position.z),
-    //                                             speed * Time.deltaTime);
-    //}
-
 
 
 
