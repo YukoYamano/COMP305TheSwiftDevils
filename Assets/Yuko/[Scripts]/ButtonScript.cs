@@ -2,19 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManagerSeesaw : MonoBehaviour
+public class ButtonScript : MonoBehaviour
 {
-    private Animator animatorController;
-    private Animator anim;
-
 
     public SpriteRenderer toDisabledSprite;
-    public GameObject spawnObject;
+    public GameObject toAppearedGameObjectPrefab;
+
+    public Vector3 toBeAppearedLocationGameObject;
 
     // Start is called before the first frame update
     void Start()
     {
-        anim= spawnObject.GetComponent<Animator>();
         toDisabledSprite = GetComponent<SpriteRenderer>();
     }
 
@@ -26,9 +24,9 @@ public class GameManagerSeesaw : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        toBeAppearedLocationGameObject = toAppearedGameObjectPrefab.transform.position;
         toDisabledSprite.enabled = false;
-        anim.SetBool("isButtonPressed",true);
+        Instantiate(toAppearedGameObjectPrefab, new Vector3(toBeAppearedLocationGameObject.x, toBeAppearedLocationGameObject.y, toBeAppearedLocationGameObject.z), Quaternion.identity);
+        
     }
-
- 
 }
