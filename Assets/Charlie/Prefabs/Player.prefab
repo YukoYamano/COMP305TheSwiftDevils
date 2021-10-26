@@ -196,7 +196,7 @@ Transform:
   m_GameObject: {fileID: 9161066600407121234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.45, y: 0.37, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 10}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 9161066601619806139}
   - {fileID: 9161066601265965258}
@@ -308,20 +308,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   platformLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 192
   stone: {fileID: 1831780950782445713, guid: 216fa2c56f3a7f342818f04e6145ff50, type: 3}
   balloon: {fileID: 2687940918131117099, guid: ef95f5bbbfc8279489f62c83a9756b5e, type: 3}
-  objSpawner: {fileID: 9161066601619806136}
+  groundCheck: {fileID: 9161066601619806136}
   balloonSprite: {fileID: 1489564296}
   stoneSprite: {fileID: 1048765002}
   isGrounded: 0
+  onPlatform: 0
   isFacingRight: 0
-  isSprinting: 0
-  walkingSpeed: 50
-  runningSpeed: 75
-  jumpForce: 6.5
+  moveSpeed: 220
+  jumpForce: 8.5
   isHoldingStone: 0
   isHoldingBalloon: 0
+  fallMultiplier: 3
+  lowJumpMultiplier: 2.5
 --- !u!95 &9161066600407121224
 Animator:
   serializedVersion: 3
@@ -434,7 +435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9161066601619806139}
   m_Layer: 0
-  m_Name: Object Spawner
+  m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,7 +449,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9161066601619806136}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.346, y: 0.025, z: 0}
+  m_LocalPosition: {x: -0.033, y: -0.376, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9161066600407121238}
