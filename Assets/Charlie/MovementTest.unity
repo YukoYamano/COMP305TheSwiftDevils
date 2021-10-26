@@ -2845,53 +2845,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9161066600407121225, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: jumpForce
-      value: 8.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161066600407121225, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: moveSpeed
-      value: 220
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161066600407121225, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: groundCheck
-      value: 
-      objectReference: {fileID: 1537294584}
-    - target: {fileID: 9161066600407121225, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: fallMultiplier
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161066600407121225, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: lowJumpMultiplier
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161066600407121225, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: platformLayer.m_Bits
-      value: 192
-      objectReference: {fileID: 0}
     - target: {fileID: 9161066600407121234, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 9161066600407121237, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9161066600407121238, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: m_RootOrder
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161066600407121238, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161066600407121238, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161066600407121238, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 9161066600407121238, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2932,18 +2892,6 @@ PrefabInstance:
     - target: {fileID: 9161066600407121238, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161066601619806136, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: m_Name
-      value: GroundCheck
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161066601619806139, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.033
-      objectReference: {fileID: 0}
-    - target: {fileID: 9161066601619806139, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.376
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
@@ -3030,8 +2978,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1537294584 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9161066601619806136, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-  m_PrefabInstance: {fileID: 934400312}
-  m_PrefabAsset: {fileID: 0}
