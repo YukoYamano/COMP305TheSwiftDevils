@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    
+
     [SerializeField] LayerMask platformLayer;
     [SerializeField] GameObject stone;
     [SerializeField] GameObject balloon;
@@ -41,10 +41,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
-       
-
-
-
     }
 
     private void Update()
@@ -53,7 +49,7 @@ public class PlayerController : MonoBehaviour
         Jump();
         CheckInput();
         UpdateSprites();
-        
+
 
 
     }
@@ -70,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
 
         //for turning
-        if ((x < 0 && isFacingRight == false)||(x > 0 && isFacingRight == true))
+        if ((x < 0 && isFacingRight == false) || (x > 0 && isFacingRight == true))
         {
             Turn();
         }
@@ -111,24 +107,17 @@ public class PlayerController : MonoBehaviour
     {
         //
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.transform.position, extra, platformLayer);
-        if(colliders.Length > 0)
+        if (colliders.Length > 0)
         {
             isGrounded = true;
             animator.SetBool("isJumping", false);
         }
         else
         {
-            isGrounded =false;
+            isGrounded = false;
             animator.SetBool("isJumping", true);
         }
 
-        //foreach (Collider2D c in colliders)
-        //{
-        //    if (c.tag == "MovingPlatform")
-        //    {
-        //        onPlatform = true;
-        //    }
-        //}
 
         //using a box collider to check means that I can jump repeatedly if next to a wall...
         RaycastHit2D raycastHit = Physics2D.BoxCast(
@@ -148,15 +137,6 @@ public class PlayerController : MonoBehaviour
             transform.parent = null;
         }
 
-
-        //if (raycastHit)
-        //{
-            
-        //}
-        //else
-        //{
-            
-        //}
     }
 
 
@@ -164,41 +144,57 @@ public class PlayerController : MonoBehaviour
 
     private void CheckInput()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {    //mass + 0.5 if holding stone
-            if (isHoldingStone)
-            {
-                rbody.mass -= massChange;
-                Instantiate(stone, stoneSprite.transform.position, Quaternion.identity);
-                stoneSprite.SetActive(true);
-            }
-            else
-            {
-                rbody.mass += massChange;
-                stoneSprite.SetActive(false);
+        if (Input.GetKey(KeyCode.F))
+        {
+            DropStone();
 
-            }
-            isHoldingStone = !isHoldingStone;
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {    //mass - 0.5 if holding balloon
-            if (isHoldingBalloon)
-            {
-                rbody.mass += massChange;
-                Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
-
-
-            }
-            else
-            {
-                rbody.mass -= massChange;
-
-            }
-
-            isHoldingBalloon = !isHoldingBalloon;
+        if (Input.GetKey(KeyCode.Q))
+        {
+            DropBalloon();
         }
 
+    }
 
+    public void GetBalloon()
+    {
+        if (!isHoldingBalloon)
+        {
+            isHoldingBalloon = true;
+            rbody.mass -= massChange;
+        }
+    }
+
+    public void GetStone()
+    {
+        if (!isHoldingStone)
+        {
+            isHoldingStone = true;
+            rbody.mass += massChange;
+        }
+
+    }
+
+    private void DropBalloon()
+    {
+        if (isHoldingBalloon)
+        {
+
+            rbody.mass += massChange;
+            Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
+            isHoldingBalloon = false;
+
+        }
+    }
+
+    private void DropStone()
+    {
+        if (isHoldingStone)
+        {
+            rbody.mass -= massChange;
+            Instantiate(stone, stoneSprite.transform.position, Quaternion.identity);
+            isHoldingStone = false;
+        }
     }
 
     private void UpdateSprites()
@@ -207,7 +203,7 @@ public class PlayerController : MonoBehaviour
         {
             balloonSprite.SetActive(true);
         }
-        else
+        else if(!isHoldingBalloon)
         {
             balloonSprite.SetActive(false);
         }
@@ -216,7 +212,7 @@ public class PlayerController : MonoBehaviour
         {
             stoneSprite.SetActive(true);
         }
-        else
+        else if(!isHoldingStone)
         {
             stoneSprite.SetActive(false);
         }
