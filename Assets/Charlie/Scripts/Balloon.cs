@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Balloon : MonoBehaviour
 {
-    public float massChange = 0.5f;
+    [SerializeField] GameObject balloon;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,14 +17,16 @@ public class Balloon : MonoBehaviour
         
     }
 
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")){
+        if (collision.CompareTag("Player") && Input.GetKey(KeyCode.E))
+        {
+            if (collision.GetComponent<PlayerController>().isHoldingBalloon == false)
+            {
+                collision.GetComponent<PlayerController>().GetBalloon();
+                Destroy(balloon);
+            }
 
-            //collision.gameObject.GetComponent<Rigidbody2D>().mass -= massChange;
-            //Destroy(this.gameObject);
         }
-
     }
 }
