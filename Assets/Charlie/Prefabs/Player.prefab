@@ -317,7 +317,8 @@ MonoBehaviour:
   isGrounded: 0
   onPlatform: 0
   isFacingRight: 0
-  moveSpeed: 220
+  moveSpeed: 450
+  airSpeed: 250
   jumpForce: 8.5
   isHoldingStone: 0
   isHoldingBalloon: 0

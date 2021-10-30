@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public bool onPlatform = false; //flag to see if player is on a platform
     public bool isFacingRight = false; //to see direction player is facing (for flipping sprites)
     public float moveSpeed = 5f; //movespeed
+    public float airSpeed = 250f; //lateral movement when in air
     public float jumpForce = 3.5f; //regular jump
     public const float massChange = 0.25f; //mass change when picking up stone or balloon
     public bool isHoldingStone = false; //true when holding stone
@@ -61,8 +62,17 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("Walking", Mathf.Abs(x));
 
-        //moves the character left and right using add force
-        rbody.AddForce(new Vector3(x * moveSpeed, 0, 0));
+
+
+        if (isGrounded)
+        {
+            //moves the character left and right using add force
+            rbody.AddForce(new Vector3(x * moveSpeed, 0, 0));
+        }
+        else
+        {
+            rbody.AddForce(new Vector3(x * airSpeed, 0, 0));
+        }
 
 
         //for turning
