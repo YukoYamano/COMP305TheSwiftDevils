@@ -29,7 +29,7 @@ public class BalloonButton : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Balloon"))
+        if (collision.gameObject.CompareTag("Balloon")|| collision.gameObject.CompareTag("Stone"))
         {
             //Set to pressed state
             activeImg.sprite = pressed;
@@ -39,4 +39,5 @@ public class BalloonButton : MonoBehaviour
 
         }
     }
+
 }
