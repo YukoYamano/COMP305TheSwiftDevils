@@ -7,7 +7,6 @@ public class ButtonScript : MonoBehaviour
 
     public SpriteRenderer toDisabledSprite;
     public GameObject toAppearedGameObjectPrefab;
-
     public Vector3 toBeAppearedLocationGameObject;
 
     // Start is called before the first frame update

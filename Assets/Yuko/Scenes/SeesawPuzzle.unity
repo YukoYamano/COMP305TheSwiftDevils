@@ -12443,6 +12443,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boulder: {fileID: 4052934051922027814, guid: 201ef6d125c431645964c6b2e3053fef, type: 3}
   boulderSpawnPoint: {fileID: 1787491440}
+--- !u!212 &1525119588 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7962673283829259764, guid: 1ff8d142d8549b34ca07c80eecec5c70, type: 3}
+  m_PrefabInstance: {fileID: 7962673282948182832}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1622614388 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6268744178925452679, guid: afa2d0973f3c8444781e1d3699f36020, type: 3}
@@ -12834,6 +12839,14 @@ PrefabInstance:
       propertyPath: BlackBee
       value: 
       objectReference: {fileID: 1622614388}
+    - target: {fileID: 7962673283364365374, guid: 1ff8d142d8549b34ca07c80eecec5c70, type: 3}
+      propertyPath: spawnObject
+      value: 
+      objectReference: {fileID: 1622614388}
+    - target: {fileID: 7962673283364365374, guid: 1ff8d142d8549b34ca07c80eecec5c70, type: 3}
+      propertyPath: toDisabledSprite
+      value: 
+      objectReference: {fileID: 1525119588}
     - target: {fileID: 7962673283909942684, guid: 1ff8d142d8549b34ca07c80eecec5c70, type: 3}
       propertyPath: m_Name
       value: Buttons

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManagerSeesaw : MonoBehaviour
+public class GameManagerPlatrformPuzzle : MonoBehaviour
 {
     private Animator animatorController;
     private Animator anim;
@@ -22,14 +22,13 @@ public class GameManagerSeesaw : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        spawnObject.SetActive(true);
         toDisabledSprite.enabled = false;
         anim.SetBool("isButtonPressed", true);
     }
-
- 
 }

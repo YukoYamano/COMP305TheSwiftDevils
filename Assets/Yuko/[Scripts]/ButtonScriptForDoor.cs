@@ -2,34 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManagerSeesaw : MonoBehaviour
+public class ButtonScriptForDoor : MonoBehaviour
 {
-    private Animator animatorController;
-    private Animator anim;
-
+    
 
     public SpriteRenderer toDisabledSprite;
-    public GameObject spawnObject;
+    public GameObject toDisableGameObject;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        anim = spawnObject.GetComponent<Animator>();
+        
         toDisabledSprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        toDisabledSprite.enabled = false;
-        anim.SetBool("isButtonPressed", true);
-    }
+        toDisableGameObject.SetActive(false);
+       
 
- 
+    }
 }
