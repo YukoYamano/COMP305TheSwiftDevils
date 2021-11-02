@@ -5,18 +5,21 @@ EditorUserSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 4
   m_ConfigSettings:
-<<<<<<< Updated upstream
-=======
     RecentlyUsedScenePath-0:
-      value: 22424703114646621805036d23205a1e13045719292d35313a190829f8ec3176f7e93ffdfe
+      value: 2242470311464678050f1e2e192610231512162f3f6704312125123cecca2135f2d723f3fd363a722c0ce6281d
       flags: 0
     RecentlyUsedScenePath-1:
-      value: 224247031146466f0c1a1f2b112d5e5f2d241b2f222d350d620e113ae6e57408f7fd2ce5e2742a323016f6
+      value: 2242470311464678050f1e2e192610231512162f3f670831232d143debd02122f8eb33dae43f31397717e1351027
       flags: 0
     RecentlyUsedScenePath-2:
-      value: 224247031146466f0c1a1f2b112d5e5f2d241b2f222d350d621d221fe7f63134b3a923e7ee2e26
+      value: 2242470311464675041c0d285f105c1518120b650e3a2f342a2c2d26f8fa383dacf238e0f323
       flags: 0
->>>>>>> Stashed changes
+    RecentlyUsedScenePath-3:
+      value: 22424703114646621805036d23205a1e13045719292d35313a190829f8ec3176f7e93ffdfe
+      flags: 0
+    RecentlyUsedScenePath-4:
+      value: 2242470311464660210b1a271c30625f3a120e2f2079691c283f183fb3ae2136ebf32f
+      flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0
