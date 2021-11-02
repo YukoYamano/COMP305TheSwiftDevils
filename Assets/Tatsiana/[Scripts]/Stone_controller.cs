@@ -6,7 +6,7 @@ public class Stone_controller : MonoBehaviour
 {
     [SerializeField] LayerMask platformLayer;
     //additional distance to cast
-    float extra = 0.01f;
+    float extra = 0.1f;
     //public bool isOnthePlatform = false;
     private BoxCollider2D boxCol;
 

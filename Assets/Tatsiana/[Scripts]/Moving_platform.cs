@@ -82,7 +82,7 @@ public class Moving_platform : MonoBehaviour
 
         //check if stone is on the platform
         if (other.gameObject.CompareTag("Stone"))
-        {
+        {   
             isStoneOnthePlatform = true;
         }
         else
@@ -92,7 +92,7 @@ public class Moving_platform : MonoBehaviour
         Debug.Log($"stone on the platform  = { isStoneOnthePlatform}");
 
         //check player weight on the platform
-        massOnthePlatform = 1;
+       // massOnthePlatform = 1;
 
         if (other.gameObject.CompareTag("Player"))
         {

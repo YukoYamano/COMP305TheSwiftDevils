@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player_Destroyer : MonoBehaviour
 {
     [SerializeField] private GameObject player;
-    [SerializeField] private Transform playerSpawnPoint;
+   // [SerializeField] private Transform playerSpawnPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -23,11 +24,12 @@ public class Player_Destroyer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Collision with player detected");
-            
-            Instantiate(player, playerSpawnPoint.position, Quaternion.identity);
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+            //SceneManager.LoadScene("Glide Puzzle");
+            /*Instantiate(player, playerSpawnPoint.position, Quaternion.identity);
             Destroy(other.gameObject);
-            Debug.Log("player instantiated");
+            Debug.Log("player instantiated");*/
         }
         
     }

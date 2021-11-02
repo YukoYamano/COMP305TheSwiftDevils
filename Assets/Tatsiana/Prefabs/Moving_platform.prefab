@@ -187,7 +187,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7995285222404330531}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Moving_platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

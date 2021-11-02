@@ -12,6 +12,8 @@ TagManager:
   - DeathZone
   - Boulder
   - Ice
+  - Ground
+  - Box
   layers:
   - Default
   - TransparentFX
