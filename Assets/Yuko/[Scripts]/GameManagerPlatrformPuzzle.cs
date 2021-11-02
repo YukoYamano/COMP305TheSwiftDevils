@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameManagerPlatrformPuzzle : MonoBehaviour
 {
-    private Animator animatorController;
-    private Animator anim;
+   private Animator animatorController;
+   private Animator anim;
 
 
     public SpriteRenderer toDisabledSprite;
@@ -15,7 +15,7 @@ public class GameManagerPlatrformPuzzle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        anim = spawnObject.GetComponent<Animator>();
+       anim = spawnObject.GetComponent<Animator>();
         toDisabledSprite = GetComponent<SpriteRenderer>();
     }
 
