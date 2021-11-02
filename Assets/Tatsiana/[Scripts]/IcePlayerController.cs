@@ -23,7 +23,7 @@ public class IcePlayerController : MonoBehaviour
     public float fallMultiplier = 3.0f; //higher grav when falling,
     public float lowJumpMultiplier = 2.5f; //grav multiplier 
 
-
+    
     //additional distance to cast
     float extra = 0.1f;
 
@@ -42,16 +42,18 @@ public class IcePlayerController : MonoBehaviour
     void FixedUpdate()
     {
         if (isOntheIce)
-        {
-            Glide();
-            animator.SetBool("isGliding", true);
-            isOntheIce = false;
-        }
+        {                
+             Glide();
+             animator.SetBool("isGliding", true);
+             isOntheIce = false;
+
+
+        }         
         else
         {
             animator.SetBool("isGliding", false);
             Move();
-           
+            isOntheIce = false;
         }
        
     }
@@ -131,14 +133,7 @@ public class IcePlayerController : MonoBehaviour
             animator.SetBool("isJumping", true);
         }
 
-        //foreach (Collider2D c in colliders)
-        //{
-        //    if (c.tag == "MovingPlatform")
-        //    {
-        //        onPlatform = true;
-        //    }
-        //}
-
+        
         //using a box collider to check means that I can jump repeatedly if next to a wall...
         RaycastHit2D raycastHit = Physics2D.BoxCast(
             cCol.bounds.center,
@@ -157,15 +152,6 @@ public class IcePlayerController : MonoBehaviour
             transform.parent = null;
         }
 
-
-        //if (raycastHit)
-        //{
-
-        //}
-        //else
-        //{
-
-        //}
     }
 
 
@@ -195,7 +181,6 @@ public class IcePlayerController : MonoBehaviour
             {
                 rbody.mass += massChange;
                 Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
-
 
             }
             else
@@ -237,27 +222,54 @@ public class IcePlayerController : MonoBehaviour
     private bool isOntheIce = false;  // to check if Player is on the ice
     public float glidingSpeed;
     private float facingCoefficient;
+    public bool isCollideBox = false;
+
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+            if (other.gameObject.CompareTag("Box"))
+            {
+                isCollideBox  = true;
+            Debug.Log("Collide Box");
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Box"))
+        {
+            isCollideBox = false;
+           
+        }
+    }
 
     void OnCollisionStay2D(Collision2D other)
     {
+
         if (other.gameObject.CompareTag("Ice"))
         {
             isOntheIce = true;
         }
-
-    }
-    void Glide()
-    {
-        if (gameObject.GetComponent<Transform>().localScale == new Vector3(1.5f, 1.5f, 1.5f))
+        else
         {
-            facingCoefficient = 1;
+            isOntheIce = false;
         }
-        else if (gameObject.GetComponent<Transform>().localScale == new Vector3(-1.5f, 1.5f, 1.5f))
-        {
-            facingCoefficient = -1;
-        }
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 0f) * facingCoefficient * glidingSpeed;
-
     }
 
+        void Glide()
+        {
+            if (gameObject.GetComponent<Transform>().localScale == new Vector3(1.5f, 1.5f, 1.5f))
+            {
+                facingCoefficient = 1;
+            }
+            else if (gameObject.GetComponent<Transform>().localScale == new Vector3(-1.5f, 1.5f, 1.5f))
+            {
+                facingCoefficient = -1;
+            }
+            gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 0f) * facingCoefficient * glidingSpeed;
+
+        }
 }
+
+
+   
