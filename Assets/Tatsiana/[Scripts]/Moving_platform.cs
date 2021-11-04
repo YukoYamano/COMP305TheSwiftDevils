@@ -14,7 +14,7 @@ public class Moving_platform : MonoBehaviour
     private bool isMoveDown = false;
     private bool isMoveToStart = false;
 
-    private float massOnthePlatform =1;
+    private float massOnthePlatform =1.0f;
     private bool isStoneOnthePlatform = false;
 
     void Awake()
@@ -116,6 +116,8 @@ public class Moving_platform : MonoBehaviour
             isMoveToStart = true;
         }
         //Debug.Log($"stone on the platform  = { isStoneOnthePlatform}; isMoveUp = { isMoveUp}");
+
+      
     }
 
 
