@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+
         }
 
         if (rbody.velocity.y < 0) //when falling, applies a grav multiplier in order to fall faster
