@@ -8,14 +8,15 @@ public class GameManagerSeesaw : MonoBehaviour
     private Animator anim;
 
 
-    public SpriteRenderer sRender;
-    public GameObject BlackBee;
+    public SpriteRenderer toDisabledSprite;
+    public GameObject spawnObject;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        anim= BlackBee.GetComponent<Animator>();
-        sRender = GetComponent<SpriteRenderer>();
+        anim = spawnObject.GetComponent<Animator>();
+        toDisabledSprite = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -26,9 +27,8 @@ public class GameManagerSeesaw : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        sRender.enabled = false;
-   
-        anim.SetBool("isButtonPressed",true);
+        toDisabledSprite.enabled = false;
+        anim.SetBool("isButtonPressed", true);
     }
 
  

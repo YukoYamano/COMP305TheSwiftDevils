@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Stone : MonoBehaviour
 {
-
-    public float massChange = 0.5f;
+    [SerializeField] GameObject stone;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,13 +19,21 @@ public class Stone : MonoBehaviour
 
 
     // Code for stone behaviour here
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        Debug.Log("Player Detected");
+
+        if (collision.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
-            //collision.gameObject.GetComponent<Rigidbody2D>().mass += massChange;
-            //Destroy(this.gameObject);
+            if (collision.GetComponent<PlayerController>().isHoldingStone == false)
+            {
+                collision.GetComponent<PlayerController>().GetStone();
+                Destroy(stone);
+            }
+
         }
     }
+
+
 
 }

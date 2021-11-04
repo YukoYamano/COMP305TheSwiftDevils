@@ -2,26 +2,35 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
     [SerializeField] LayerMask platformLayer;
     [SerializeField] GameObject stone;
     [SerializeField] GameObject balloon;
-    [SerializeField] GameObject objSpawner;
+    [SerializeField] GameObject groundCheck;
     [SerializeField] GameObject balloonSprite;
     [SerializeField] GameObject stoneSprite;
 
     //for testing purposes only
     public bool isGrounded = false; //to see if player is on a surface (for jumping)
+    public bool onPlatform = false; //flag to see if player is on a platform
     public bool isFacingRight = false; //to see direction player is facing (for flipping sprites)
-    public bool isSprinting = false;    //to see if player is sprinting
-    public float walkingSpeed = 5f;
-    public float runningSpeed = 10f;
-    public float jumpForce = 3.5f;
-    public bool isHoldingStone = false;
-    public bool isHoldingBalloon = false;
-
+    public float moveSpeed = 5f; //movespeed
+    public float airSpeed = 250f; //lateral movement when in air
+    public float jumpForce = 3.5f; //regular jump
+    public const float massChange = 0.25f; //mass change when picking up stone or balloon
+    public bool isHoldingStone = false; //true when holding stone
+    public bool isHoldingBalloon = false; //true when holding balloon
+    public float fallMultiplier = 3.0f; //higher grav when falling,
+    public float lowJumpMultiplier = 2.5f; //grav multiplier
+                                           
+    //for Glide level
+    private bool isOntheIce = false;  // to check if Player is on the ice
+    public float glidingSpeed =3.0f;
+    private float facingCoefficient;
+    //end Glide level
 
     //additional distance to cast
-    float extra = 0.01f;
+    float extra = 0.1f;
 
     private Rigidbody2D rbody;
     private CapsuleCollider2D cCol;
@@ -32,24 +41,34 @@ public class PlayerController : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         cCol = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
-
     }
 
     // Fixed Update is called because physics calculations are required
     void FixedUpdate()
     {
-        Move();
-        _ = CheckGrounded();
+        if (isOntheIce)  // to check if Player is on the ice
+        {
+            Glide();
+            animator.SetBool("isGliding", true);
+            isOntheIce = false;
 
 
-
+        }
+        else
+        {
+            animator.SetBool("isGliding", false);
+            Move();
+            isOntheIce = false;
+        }
     }
 
     private void Update()
     {
+        CheckGrounded();
         Jump();
         CheckInput();
         UpdateSprites();
+
 
 
     }
@@ -61,43 +80,26 @@ public class PlayerController : MonoBehaviour
 
         animator.SetFloat("Walking", Mathf.Abs(x));
 
-        //checks if the Shift key is being held down
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            isSprinting = true;
-        }
-        else if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            isSprinting = false;
-        }
 
 
-        if (isSprinting)
+        if (isGrounded)
         {
-            rbody.AddForce(new Vector3(x * runningSpeed, 0, 0));
+            //moves the character left and right using add force
+            rbody.AddForce(new Vector3(x * moveSpeed, 0, 0));
         }
         else
         {
-            rbody.AddForce(new Vector3(x * walkingSpeed, 0, 0));
+            rbody.AddForce(new Vector3(x * airSpeed, 0, 0));
         }
 
+
         //for turning
-        if ((x < 0 && isFacingRight == false)||(x > 0 && isFacingRight == true))
+        if ((x < 0 && isFacingRight == false) || (x > 0 && isFacingRight == true))
         {
             Turn();
         }
 
 
-    }
-
-
-    void Jump()
-    {
-        //Adding force to obj for jump
-        if (Input.GetKeyDown(KeyCode.Space) && CheckGrounded())
-        {
-            rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-        }
     }
 
     void Turn()
@@ -107,28 +109,33 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
-    bool CheckGrounded()
+    void Jump()
     {
-        //using a box collider to check means that I can jump repeatedly if next to a wall...
-        RaycastHit2D raycastHit = Physics2D.BoxCast(
-            cCol.bounds.center,
-            cCol.bounds.size,
-            0f,
-            Vector2.down,
-            extra, platformLayer);
-        //Check if player is on the Moving Platform
-        if (raycastHit.collider != null && raycastHit.collider.tag == "MovingPlatform")
+        //Adding force to obj for jump
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            transform.parent = raycastHit.transform;
-        }
-        else
-        {
-            transform.parent = null;
+            rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
         }
 
+        if (rbody.velocity.y < 0) //when falling, applies a grav multiplier in order to fall faster
+        {
+            rbody.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+        }
+        else if (rbody.velocity.y > 0 && Input.GetButton("Jump") == false) //if rising, but Jump key is released 'early' (before apex of jump), apply a slightly lower grav muliplier
+        {
+            rbody.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+        }
 
-        if (raycastHit)
+    }
+
+
+
+
+    void CheckGrounded()
+    {
+        //
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheck.transform.position, extra, platformLayer);
+        if (colliders.Length > 0)
         {
             isGrounded = true;
             animator.SetBool("isJumping", false);
@@ -139,49 +146,83 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("isJumping", true);
         }
 
-        return isGrounded;
+
+        //using a box collider to check means that I can jump repeatedly if next to a wall...
+        RaycastHit2D raycastHit = Physics2D.BoxCast(
+            cCol.bounds.center,
+            cCol.bounds.size,
+            0f,
+            Vector2.down,
+            extra, platformLayer);
+
+        //Check if player is on the Moving Platform
+        if (raycastHit.collider != null && raycastHit.collider.tag == "MovingPlatform")
+        {
+            transform.parent = raycastHit.transform;
+        }
+        else
+        {
+            transform.parent = null;
+        }
+
     }
 
 
-    // E hold stone, Q to hold balloon
+    // E hold stone, Q to hold balloon, press respective button to 'drop' the item
 
     private void CheckInput()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {    //mass + 0.5 if holding stone
-            if (isHoldingStone)
-            {
-                rbody.mass -= 0.5f;
-                Instantiate(stone, stoneSprite.transform.position, Quaternion.identity);
-                stoneSprite.SetActive(true);
-            }
-            else
-            {
-                rbody.mass += 0.5f;
-                stoneSprite.SetActive(false);
+        if (Input.GetKey(KeyCode.F))
+        {
+            DropStone();
 
-            }
-            isHoldingStone = !isHoldingStone;
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {    //mass - 0.5 if holding balloon
-            if (isHoldingBalloon)
-            {
-                rbody.mass += 0.5f;
-                Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
-
-
-            }
-            else
-            {
-                rbody.mass -= 0.5f;
-
-            }
-
-            isHoldingBalloon = !isHoldingBalloon;
+        if (Input.GetKey(KeyCode.Q))
+        {
+            DropBalloon();
         }
 
+    }
 
+    public void GetBalloon()
+    {
+        if (!isHoldingBalloon)
+        {
+            isHoldingBalloon = true;
+            rbody.mass -= massChange;
+        }
+    }
+
+    public void GetStone()
+    {
+        if (!isHoldingStone)
+        {
+            isHoldingStone = true;
+            rbody.mass += massChange;
+        }
+
+    }
+
+    private void DropBalloon()
+    {
+        if (isHoldingBalloon)
+        {
+
+            rbody.mass += massChange;
+            Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
+            isHoldingBalloon = false;
+
+        }
+    }
+
+    private void DropStone()
+    {
+        if (isHoldingStone)
+        {
+            rbody.mass -= massChange;
+            Instantiate(stone, stoneSprite.transform.position, Quaternion.identity);
+            isHoldingStone = false;
+        }
     }
 
     private void UpdateSprites()
@@ -190,7 +231,7 @@ public class PlayerController : MonoBehaviour
         {
             balloonSprite.SetActive(true);
         }
-        else
+        else if(!isHoldingBalloon)
         {
             balloonSprite.SetActive(false);
         }
@@ -199,10 +240,40 @@ public class PlayerController : MonoBehaviour
         {
             stoneSprite.SetActive(true);
         }
-        else
+        else if(!isHoldingStone)
         {
             stoneSprite.SetActive(false);
         }
     }
+
+    //for Glide level
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ice"))
+        {
+            isOntheIce = true;
+        }
+        else
+        {
+            isOntheIce = false;
+        }
+    }
+
+    void Glide()
+    {
+        if (gameObject.GetComponent<Transform>().localScale == new Vector3(1.5f, 1.5f, 1.5f))
+        {
+            facingCoefficient = 1;
+        }
+        else if (gameObject.GetComponent<Transform>().localScale == new Vector3(-1.5f, 1.5f, 1.5f))
+        {
+            facingCoefficient = -1;
+        }
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 0f) * facingCoefficient * glidingSpeed;
+
+    }
+
+
 
 }

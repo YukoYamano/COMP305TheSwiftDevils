@@ -11,6 +11,10 @@ TagManager:
   - Flag
   - DeathZone
   - Boulder
+  - Ice
+  - Ground
+  - Box
+  - Spike
   layers:
   - Default
   - TransparentFX
@@ -20,7 +24,7 @@ TagManager:
   - UI
   - MovingPlatform
   - Platform
-  - 
+  - Ice
   - 
   - 
   - 
