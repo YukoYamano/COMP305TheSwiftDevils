@@ -6,7 +6,7 @@ public class Moving_platform : MonoBehaviour
 {
     [SerializeField] float speed = 1;
     [SerializeField] GameObject topLimit, bottomLimit;
-    // [SerializeField] bool hasReachedTop = false, hasReachedBottom = false;
+   
     Vector3 startPosition, topPosition, bottomPosition;
 
 
@@ -14,7 +14,7 @@ public class Moving_platform : MonoBehaviour
     private bool isMoveDown = false;
     private bool isMoveToStart = false;
 
-    private float massOnthePlatform;
+    private float massOnthePlatform =1.0f;
     private bool isStoneOnthePlatform = false;
 
     void Awake()
@@ -36,21 +36,22 @@ public class Moving_platform : MonoBehaviour
 
         if (isStoneOnthePlatform)
         {
+            Debug.Log($"stone");
             if (isMoveUp)  //if there are stone + player with balloon on the platform => weight =1 =>platform moves to initial position
             {
                 Debug.Log($"moveUp  = { isMoveUp}");
                 MoveToStart();
-                isMoveToStart = false;
-
+               // isMoveToStart = false;
+                
             }
             else   // in other cases if stone is on the platform, the platform moves down
             {
                 Debug.Log($"moveUp  = { isMoveUp}");
                 MoveDown();
-                isMoveDown = false;
+                //isMoveDown = false;
 
             }
-            isStoneOnthePlatform = false;
+            
         }
         else
         {
@@ -79,23 +80,25 @@ public class Moving_platform : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D other)
     {
-
+       
         //check if stone is on the platform
         if (other.gameObject.CompareTag("Stone"))
-        {   
+        {
+            Debug.Log($"stone");
             isStoneOnthePlatform = true;
         }
         else
         {
             isStoneOnthePlatform = false;
         }
-        Debug.Log($"stone on the platform  = { isStoneOnthePlatform}");
+     
 
         //check player weight on the platform
-       // massOnthePlatform = 1;
+        massOnthePlatform = 1;
 
         if (other.gameObject.CompareTag("Player"))
         {
+            
             massOnthePlatform = other.gameObject.GetComponent<Rigidbody2D>().mass;
 
         }
@@ -112,7 +115,9 @@ public class Moving_platform : MonoBehaviour
         {
             isMoveToStart = true;
         }
+        //Debug.Log($"stone on the platform  = { isStoneOnthePlatform}; isMoveUp = { isMoveUp}");
 
+      
     }
 
 

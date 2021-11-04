@@ -21,8 +21,13 @@ public class PlayerController : MonoBehaviour
     public bool isHoldingStone = false; //true when holding stone
     public bool isHoldingBalloon = false; //true when holding balloon
     public float fallMultiplier = 3.0f; //higher grav when falling,
-    public float lowJumpMultiplier = 2.5f; //grav multiplier 
-
+    public float lowJumpMultiplier = 2.5f; //grav multiplier
+                                           
+    //for Glide level
+    private bool isOntheIce = false;  // to check if Player is on the ice
+    public float glidingSpeed =3.0f;
+    private float facingCoefficient;
+    //end Glide level
 
     //additional distance to cast
     float extra = 0.1f;
@@ -41,7 +46,20 @@ public class PlayerController : MonoBehaviour
     // Fixed Update is called because physics calculations are required
     void FixedUpdate()
     {
-        Move();
+        if (isOntheIce)  // to check if Player is on the ice
+        {
+            Glide();
+            animator.SetBool("isGliding", true);
+            isOntheIce = false;
+
+
+        }
+        else
+        {
+            animator.SetBool("isGliding", false);
+            Move();
+            isOntheIce = false;
+        }
     }
 
     private void Update()
@@ -227,5 +245,35 @@ public class PlayerController : MonoBehaviour
             stoneSprite.SetActive(false);
         }
     }
+
+    //for Glide level
+
+    void OnCollisionStay2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ice"))
+        {
+            isOntheIce = true;
+        }
+        else
+        {
+            isOntheIce = false;
+        }
+    }
+
+    void Glide()
+    {
+        if (gameObject.GetComponent<Transform>().localScale == new Vector3(1.5f, 1.5f, 1.5f))
+        {
+            facingCoefficient = 1;
+        }
+        else if (gameObject.GetComponent<Transform>().localScale == new Vector3(-1.5f, 1.5f, 1.5f))
+        {
+            facingCoefficient = -1;
+        }
+        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 0f) * facingCoefficient * glidingSpeed;
+
+    }
+
+
 
 }
