@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-
     public GameObject instructions;
     public GameObject fan;
     public bool isFanning;
@@ -20,6 +19,7 @@ public class Lever : MonoBehaviour
         fanWind = fan.GetComponent<BoxCollider2D>();
         isFanning = false;
         activeImg = GetComponent<SpriteRenderer>();
+        instructions.SetActive(false);
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class Lever : MonoBehaviour
     {
         if (instructions.activeInHierarchy)
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 isFanning = !isFanning;
                 fanWind.enabled = isFanning;
