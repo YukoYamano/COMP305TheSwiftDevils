@@ -6,13 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Nandini/Scenes/Start Screen.unity
+    path: Assets/[Levels]/MainMenu/Start Screen.unity
     guid: f4d800e60300b764da2f3462f934283d
   - enabled: 1
     path: Assets/Nandini/Scenes/Water Puzzle.unity
     guid: 81d968ad35bf903498e563bb1ed4315d
   - enabled: 1
-    path: Assets/Nandini/Scenes/Win Screen.unity
+    path: Assets/[Levels]/WinScreen/Win Screen.unity
     guid: 0c2fee4a01b5c654cbefef5e0dae94be
   - enabled: 1
     path: Assets/Nandini/Scenes/Game Over Screen.unity
