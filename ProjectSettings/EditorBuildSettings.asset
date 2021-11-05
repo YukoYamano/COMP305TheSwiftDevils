@@ -9,12 +9,18 @@ EditorBuildSettings:
     path: Assets/[Levels]/MainMenu/Start Screen.unity
     guid: f4d800e60300b764da2f3462f934283d
   - enabled: 1
-    path: Assets/Nandini/Scenes/Water Puzzle.unity
-    guid: 81d968ad35bf903498e563bb1ed4315d
+    path: Assets/[Levels]/Tutorial/Tutorial.unity
+    guid: 6308c51ed75fb0543b4d9d836cc69603
+  - enabled: 1
+    path: Assets/[Levels]/Level1/Level1.unity
+    guid: 06745566302d74747bba30c8745a5ddf
+  - enabled: 1
+    path: Assets/[Levels]/Level2/Level 2.unity
+    guid: 149536c6bbc161e4ca7fd3dddeda4eda
+  - enabled: 1
+    path: Assets/[Levels]/Level3/Glide Puzzle.unity
+    guid: b3b8130c9a0fa384595a8822c7d9cfdc
   - enabled: 1
     path: Assets/[Levels]/WinScreen/Win Screen.unity
     guid: 0c2fee4a01b5c654cbefef5e0dae94be
-  - enabled: 1
-    path: Assets/Nandini/Scenes/Game Over Screen.unity
-    guid: ff777eede195a674c9814544e73b843f
   m_configObjects: {}
