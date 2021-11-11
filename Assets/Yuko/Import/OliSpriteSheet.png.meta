@@ -4,142 +4,142 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 6438959959175744944
-    second: Oli_Idel1
+    second: OliSpriteSheet_0
   - first:
       213: 482053036886262706
-    second: Oli_Idel2
+    second: OliSpriteSheet_1
   - first:
       213: 8337065767605563524
-    second: Oli_Idel3
+    second: OliSpriteSheet_2
   - first:
       213: 7547417184374615608
-    second: Oli_turn1
+    second: OliSpriteSheet_3
   - first:
       213: -3528723895404475613
-    second: Oli_turn2
+    second: OliSpriteSheet_4
   - first:
       213: -2210849857095316154
-    second: Oli_turn3
+    second: OliSpriteSheet_5
   - first:
       213: 8791564205374214281
-    second: Oli_walk1
+    second: OliSpriteSheet_6
   - first:
       213: 2802326033839858482
-    second: Oli_walk2
+    second: OliSpriteSheet_7
   - first:
       213: -5652804965570519355
-    second: Oli_walk3
+    second: OliSpriteSheet_8
   - first:
       213: 3570283787856538330
-    second: Oli_walk4
+    second: OliSpriteSheet_9
   - first:
       213: 989441982091391500
-    second: Oli_walk5
+    second: OliSpriteSheet_10
   - first:
       213: -492845268651706100
-    second: Oli_walk6
+    second: OliSpriteSheet_11
   - first:
       213: -2725287728733735234
-    second: Oli_run1
+    second: OliSpriteSheet_12
   - first:
       213: -4592534547314015125
-    second: Oli_run2
+    second: OliSpriteSheet_13
   - first:
       213: 2385250120034334390
-    second: Oli_run3
+    second: OliSpriteSheet_14
   - first:
       213: -1151552870061319588
-    second: Oli_run4
+    second: OliSpriteSheet_15
   - first:
       213: -8984540603486158227
-    second: Oli_run5
+    second: OliSpriteSheet_16
   - first:
       213: 4801366588490836665
-    second: Oli_run6
+    second: OliSpriteSheet_17
   - first:
       213: -7598249970970351539
-    second: Oli_hurt1
+    second: OliSpriteSheet_18
   - first:
       213: -1145464970009685966
-    second: Oli_hurt2
+    second: OliSpriteSheet_19
   - first:
       213: -4051674117227783613
-    second: Oli_hurt3
+    second: OliSpriteSheet_20
   - first:
       213: 767998580719147728
-    second: Oli_glide1
+    second: OliSpriteSheet_21
   - first:
       213: -3579120440133568302
-    second: Oli_glide2
+    second: OliSpriteSheet_22
   - first:
       213: -2559886306733417827
-    second: Oli_glide3
+    second: OliSpriteSheet_23
   - first:
       213: 9190417085017185228
-    second: Oli_glide4
+    second: OliSpriteSheet_24
   - first:
       213: -5486585363549651704
-    second: Oli_glide5
+    second: OliSpriteSheet_25
   - first:
       213: -7570888239994757412
-    second: Oli_glide6
+    second: OliSpriteSheet_26
   - first:
       213: -5870686662235094248
-    second: Oli_jump1
+    second: OliSpriteSheet_27
   - first:
       213: -4930737689018260606
-    second: Oli_jump2
+    second: OliSpriteSheet_28
   - first:
       213: 2953721729719067152
-    second: Oli_jump3
+    second: OliSpriteSheet_29
   - first:
       213: 2377261514885808857
-    second: Oli_jump4
+    second: OliSpriteSheet_30
   - first:
       213: -2934259603533990231
-    second: Oli_attack1
+    second: OliSpriteSheet_31
   - first:
       213: 440519011840499123
-    second: Oli_attack2
+    second: OliSpriteSheet_32
   - first:
       213: 7522475064161731034
-    second: Oli_attack3
+    second: OliSpriteSheet_33
   - first:
       213: -703093503045044
-    second: Oli_attack4
+    second: OliSpriteSheet_34
   - first:
       213: 6052894927001832042
-    second: Oli_fire1
+    second: OliSpriteSheet_35
   - first:
       213: 2066494493507377159
-    second: Oli_fire2
+    second: OliSpriteSheet_36
   - first:
       213: -285999097139475514
-    second: Oli_fire3
+    second: OliSpriteSheet_37
   - first:
       213: -1212628886387538528
-    second: Oli_fire4
+    second: OliSpriteSheet_38
   - first:
       213: -6726293208852472786
-    second: Oli_fire5
+    second: OliSpriteSheet_39
   - first:
       213: -8706202745936171275
-    second: Oli_fire6
+    second: OliSpriteSheet_40
   - first:
       213: 1655988738619126903
-    second: Oli_fire7
+    second: OliSpriteSheet_41
   - first:
       213: -5694267831839963998
-    second: Oli_fire8
+    second: OliSpriteSheet_42
   - first:
       213: -6714178393306831060
-    second: Oli_fire9
+    second: OliSpriteSheet_43
   - first:
       213: 6946251381927236884
-    second: Oli_fire10
+    second: OliSpriteSheet_44
   - first:
       213: -2241739297188481355
-    second: Oli_fire11
+    second: OliSpriteSheet_45
   - first:
       213: 7069971706994323456
     second: OliSpriteSheet_46
@@ -247,15 +247,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Oli_Idel1
+      name: OliSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1386
-        width: 250
-        height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1
+        y: 1419
+        width: 225
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5315213, y: 0.50278586}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -268,15 +268,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_Idel2
+      name: OliSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 534
-        y: 1386
-        width: 254
-        height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 526
+        y: 1411
+        width: 225
+        height: 436
+      alignment: 9
+      pivot: {x: 0.5067429, y: 0.5018104}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -289,15 +289,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_Idel3
+      name: OliSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 1068
-        y: 1386
-        width: 262
-        height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1067
+        y: 1385.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.22554249, y: 0.48133215}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -310,15 +310,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_turn1
+      name: OliSpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 1602
-        y: 1395
-        width: 274
-        height: 453
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1600
+        y: 1385
+        width: 225
+        height: 460
+      alignment: 9
+      pivot: {x: 0.21747042, y: 0.47199824}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -331,15 +331,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_turn2
+      name: OliSpriteSheet_4
       rect:
         serializedVersion: 2
-        x: 2136
-        y: 1410
-        width: 253
-        height: 438
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2133
+        y: 1385
+        width: 225
+        height: 460
+      alignment: 9
+      pivot: {x: 0.20939744, y: 0.47199824}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -352,15 +352,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_turn3
+      name: OliSpriteSheet_5
       rect:
         serializedVersion: 2
-        x: 2670
-        y: 1395
-        width: 265
-        height: 453
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2666
+        y: 1385
+        width: 225
+        height: 460
+      alignment: 9
+      pivot: {x: 0.20132582, y: 0.47199824}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -373,15 +373,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_walk1
+      name: OliSpriteSheet_6
       rect:
         serializedVersion: 2
-        x: 3204
-        y: 1403
-        width: 292
-        height: 445
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3199
+        y: 1414
+        width: 225
+        height: 434
+      alignment: 9
+      pivot: {x: 0.48359266, y: 0.5000711}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -394,15 +394,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_walk2
+      name: OliSpriteSheet_7
       rect:
         serializedVersion: 2
-        x: 3738
-        y: 1403
-        width: 307
-        height: 445
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3734
+        y: 1406
+        width: 225
+        height: 442
+      alignment: 9
+      pivot: {x: 0.47016385, y: 0.49660322}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -415,15 +415,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_walk3
+      name: OliSpriteSheet_8
       rect:
         serializedVersion: 2
-        x: 4272
-        y: 1403
-        width: 294
-        height: 445
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4265
+        y: 1407
+        width: 225
+        height: 441
+      alignment: 9
+      pivot: {x: 0.47251302, y: 0.5095467}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -436,15 +436,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_walk4
+      name: OliSpriteSheet_9
       rect:
         serializedVersion: 2
-        x: 4806
-        y: 1413
-        width: 285
-        height: 435
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4798
+        y: 1417
+        width: 225
+        height: 431
+      alignment: 9
+      pivot: {x: 0.41504556, y: 0.49066612}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -457,15 +457,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_walk5
+      name: OliSpriteSheet_10
       rect:
         serializedVersion: 2
-        x: 5340
-        y: 1391
-        width: 313
-        height: 457
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5331
+        y: 1414
+        width: 225
+        height: 433
+      alignment: 9
+      pivot: {x: 0.4406901, y: 0.48402232}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -478,15 +478,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_walk6
+      name: OliSpriteSheet_11
       rect:
         serializedVersion: 2
-        x: 5874
-        y: 1395
-        width: 310
-        height: 453
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5864
+        y: 1410
+        width: 225
+        height: 435
+      alignment: 9
+      pivot: {x: 0.44227213, y: 0.490737}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -499,15 +499,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_run1
+      name: OliSpriteSheet_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 943
-        width: 272
-        height: 443
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1
+        y: 924
+        width: 225
+        height: 460
+      alignment: 9
+      pivot: {x: 0.40190977, y: 0.50014144}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -520,15 +520,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_run2
+      name: OliSpriteSheet_13
       rect:
         serializedVersion: 2
         x: 534
-        y: 942
-        width: 234
-        height: 444
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 924
+        width: 225
+        height: 460
+      alignment: 9
+      pivot: {x: 0.38576552, y: 0.5188447}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -541,15 +541,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_run3
+      name: OliSpriteSheet_14
       rect:
         serializedVersion: 2
-        x: 1068
-        y: 931
-        width: 281
-        height: 455
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1067
+        y: 924
+        width: 225
+        height: 460
+      alignment: 9
+      pivot: {x: 0.5108203, y: 0.52824974}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -562,15 +562,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_run4
+      name: OliSpriteSheet_15
       rect:
         serializedVersion: 2
-        x: 1602
-        y: 920
-        width: 413
-        height: 466
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1600
+        y: 924
+        width: 225
+        height: 460
+      alignment: 9
+      pivot: {x: 0.36866155, y: 0.5095109}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -583,15 +583,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_run5
+      name: OliSpriteSheet_16
       rect:
         serializedVersion: 2
-        x: 2136
-        y: 928
-        width: 331
-        height: 458
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2133
+        y: 924
+        width: 225
+        height: 460
+      alignment: 9
+      pivot: {x: 0.50684893, y: 0.50021285}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -604,15 +604,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_run6
+      name: OliSpriteSheet_17
       rect:
         serializedVersion: 2
-        x: 2670
+        x: 2666
         y: 924
-        width: 347
-        height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        width: 225
+        height: 460
+      alignment: 9
+      pivot: {x: 0.5320269, y: 0.49066585}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -625,15 +625,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_hurt1
+      name: OliSpriteSheet_18
       rect:
         serializedVersion: 2
-        x: 3204
-        y: 931
-        width: 355
-        height: 455
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3199
+        y: 924.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.22554249, y: 0.49999973}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -646,15 +646,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_hurt2
+      name: OliSpriteSheet_19
       rect:
         serializedVersion: 2
-        x: 3738
-        y: 928
-        width: 311
-        height: 458
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3732
+        y: 924.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.21931045, y: 0.5072938}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -667,15 +667,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_hurt3
+      name: OliSpriteSheet_20
       rect:
         serializedVersion: 2
-        x: 4272
-        y: 928
-        width: 327
-        height: 458
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4265
+        y: 924.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.27292597, y: 0.48906007}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -688,15 +688,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_glide1
+      name: OliSpriteSheet_21
       rect:
         serializedVersion: 2
-        x: 4806
-        y: 953
-        width: 247
-        height: 433
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 4798
+        y: 924.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.29074186, y: 0.47580376}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -709,15 +709,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_glide2
+      name: OliSpriteSheet_22
       rect:
         serializedVersion: 2
-        x: 5340
-        y: 972
-        width: 354
-        height: 414
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5331
+        y: 924.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.3744458, y: 0.519357}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -730,15 +730,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_glide3
+      name: OliSpriteSheet_23
       rect:
         serializedVersion: 2
-        x: 5878
-        y: 1054
-        width: 415
-        height: 332
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5864
+        y: 924.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.46315032, y: 0.6704361}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -751,15 +751,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_glide4
+      name: OliSpriteSheet_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 677
-        width: 398
-        height: 247
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1
+        y: 463.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.4484104, y: 0.755654}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -772,15 +772,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_glide5
+      name: OliSpriteSheet_25
       rect:
         serializedVersion: 2
         x: 534
-        y: 715
-        width: 429
-        height: 209
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 463.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.45578027, y: 0.7897411}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -793,15 +793,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_glide6
+      name: OliSpriteSheet_26
       rect:
         serializedVersion: 2
-        x: 1068
-        y: 710
-        width: 424
-        height: 214
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1067
+        y: 463.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.4410405, y: 0.7982629}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -814,15 +814,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_jump1
+      name: OliSpriteSheet_27
       rect:
         serializedVersion: 2
-        x: 1602
-        y: 462
-        width: 534
-        height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1600
+        y: 481
+        width: 270
+        height: 442
+      alignment: 9
+      pivot: {x: 0.45200872, y: 0.4896612}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -835,15 +835,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_jump2
+      name: OliSpriteSheet_28
       rect:
         serializedVersion: 2
-        x: 2136
-        y: 462
-        width: 534
-        height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2133
+        y: 466
+        width: 270
+        height: 457
+      alignment: 9
+      pivot: {x: 0.5241157, y: 0.53897494}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -856,15 +856,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_jump3
+      name: OliSpriteSheet_29
       rect:
         serializedVersion: 2
-        x: 2670
-        y: 462
-        width: 534
+        x: 2666
+        y: 463
+        width: 270
         height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.53571147, y: 0.49481347}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -877,15 +877,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_jump4
+      name: OliSpriteSheet_30
       rect:
         serializedVersion: 2
-        x: 3204
-        y: 462
-        width: 534
-        height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3199
+        y: 538
+        width: 337
+        height: 387
+      alignment: 9
+      pivot: {x: 0.50474447, y: 0.5323699}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -898,15 +898,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_attack1
+      name: OliSpriteSheet_31
       rect:
         serializedVersion: 2
-        x: 3738
-        y: 462
-        width: 534
-        height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 3732
+        y: 463.25
+        width: 533.9167
+        height: 461.75
+      alignment: 9
+      pivot: {x: 0.44840953, y: 0.50852203}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -919,13 +919,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_attack2
+      name: OliSpriteSheet_32
       rect:
         serializedVersion: 2
-        x: 4272
-        y: 462
-        width: 534
-        height: 462
+        x: 4265
+        y: 463.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -940,13 +940,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_attack3
+      name: OliSpriteSheet_33
       rect:
         serializedVersion: 2
-        x: 4806
-        y: 462
-        width: 534
-        height: 462
+        x: 4798
+        y: 463.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -961,13 +961,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_attack4
+      name: OliSpriteSheet_34
       rect:
         serializedVersion: 2
-        x: 5340
-        y: 462
-        width: 534
-        height: 462
+        x: 5331
+        y: 463.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -982,13 +982,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire1
+      name: OliSpriteSheet_35
       rect:
         serializedVersion: 2
-        x: 5874
-        y: 462
-        width: 534
-        height: 462
+        x: 5864
+        y: 463.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1003,13 +1003,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire2
+      name: OliSpriteSheet_36
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 534
-        height: 462
+        x: 1
+        y: 2.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1024,13 +1024,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire3
+      name: OliSpriteSheet_37
       rect:
         serializedVersion: 2
         x: 534
-        y: 0
-        width: 534
-        height: 462
+        y: 2.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1045,13 +1045,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire4
+      name: OliSpriteSheet_38
       rect:
         serializedVersion: 2
-        x: 1068
-        y: 0
-        width: 534
-        height: 462
+        x: 1067
+        y: 2.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1066,13 +1066,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire5
+      name: OliSpriteSheet_39
       rect:
         serializedVersion: 2
-        x: 1602
-        y: 0
-        width: 534
-        height: 462
+        x: 1600
+        y: 2.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1087,13 +1087,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire6
+      name: OliSpriteSheet_40
       rect:
         serializedVersion: 2
-        x: 2136
-        y: 0
-        width: 534
-        height: 462
+        x: 2133
+        y: 2.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1108,13 +1108,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire7
+      name: OliSpriteSheet_41
       rect:
         serializedVersion: 2
-        x: 2670
-        y: 0
-        width: 534
-        height: 462
+        x: 2666
+        y: 2.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1129,13 +1129,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire8
+      name: OliSpriteSheet_42
       rect:
         serializedVersion: 2
-        x: 3204
-        y: 0
-        width: 534
-        height: 462
+        x: 3199
+        y: 2.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1150,13 +1150,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire9
+      name: OliSpriteSheet_43
       rect:
         serializedVersion: 2
-        x: 3738
-        y: 0
-        width: 534
-        height: 462
+        x: 3732
+        y: 2.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1171,13 +1171,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire10
+      name: OliSpriteSheet_44
       rect:
         serializedVersion: 2
-        x: 4272
-        y: 0
-        width: 534
-        height: 462
+        x: 4265
+        y: 2.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1192,13 +1192,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Oli_fire11
+      name: OliSpriteSheet_45
       rect:
         serializedVersion: 2
-        x: 4806
-        y: 0
-        width: 534
-        height: 462
+        x: 4798
+        y: 2.25
+        width: 533.9167
+        height: 461.75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1208,48 +1208,6 @@ TextureImporter:
       bones: []
       spriteID: 5b6fb088cfdb3e0e0800000000000000
       internalID: -2241739297188481355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OliSpriteSheet_46
-      rect:
-        serializedVersion: 2
-        x: 5340
-        y: 0
-        width: 534
-        height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00075772fc59d1260800000000000000
-      internalID: 7069971706994323456
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: OliSpriteSheet_47
-      rect:
-        serializedVersion: 2
-        x: 5874
-        y: 0
-        width: 534
-        height: 462
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ca710639ca7d48770800000000000000
-      internalID: 8612245523646125996
       vertices: []
       indices: 
       edges: []
