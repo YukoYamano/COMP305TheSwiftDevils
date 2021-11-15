@@ -21,8 +21,6 @@ public class Stone : MonoBehaviour
     // Code for stone behaviour here
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log("Player Detected");
-
         if (collision.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
             if (collision.GetComponent<PlayerController>().isHoldingStone == false)
