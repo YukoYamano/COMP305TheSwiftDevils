@@ -114,6 +114,7 @@ public class PlayerController : MonoBehaviour
         //Adding force to obj for jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            rbody.velocity = new Vector2(rbody.velocity.x, 0);
             rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
 
         }
