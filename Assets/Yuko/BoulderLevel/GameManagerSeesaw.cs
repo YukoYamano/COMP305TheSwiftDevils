@@ -27,8 +27,12 @@ public class GameManagerSeesaw : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        toDisabledSprite.enabled = false;
-        anim.SetBool("isButtonPressed", true);
+        if (other.gameObject.CompareTag("Stone"))
+        {
+            toDisabledSprite.enabled = false;
+            anim.SetBool("isButtonPressed", true);
+        }
+
     }
 
  
