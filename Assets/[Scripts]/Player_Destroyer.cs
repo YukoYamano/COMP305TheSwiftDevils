@@ -31,6 +31,10 @@ public class Player_Destroyer : MonoBehaviour
             Destroy(other.gameObject);
             Debug.Log("player instantiated");*/
         }
+        if(other.gameObject.CompareTag("Stone") || other.gameObject.CompareTag("Balloon"))
+        {
+            Destroy(other.gameObject);
+        }
         
     }
 }

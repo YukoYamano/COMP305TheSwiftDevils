@@ -44,7 +44,6 @@ public class SignPost : MonoBehaviour
         {
             if (Input.GetAxis("Fire1")>0)
             {
-                Debug.Log("Panel");
                 panel.SetActive(true);                
                 instructions.enabled = true;
                 
