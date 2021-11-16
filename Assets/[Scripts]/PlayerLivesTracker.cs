@@ -25,6 +25,7 @@ public class PlayerLivesTracker : MonoBehaviour
         {
             HandleGameOver();
         }
+        //UpdateLivesUI();
     }
 
     public void DecreaseLives(int amount = 1)
