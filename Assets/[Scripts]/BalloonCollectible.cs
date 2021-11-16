@@ -5,10 +5,13 @@ using UnityEngine;
 public class BalloonCollectible : MonoBehaviour
 {
     [SerializeField] GameObject keyPrompt;
+    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
         keyPrompt.SetActive(false);
+        audio = GetComponent<AudioSource>();
+        audio.enabled = false;
     }
 
     // Update is called once per frame
@@ -21,6 +24,7 @@ public class BalloonCollectible : MonoBehaviour
     {
         if (collision.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
+            audio.enabled = true;
             collision.GetComponent<PlayerController>().GetBalloon();
 
         }
