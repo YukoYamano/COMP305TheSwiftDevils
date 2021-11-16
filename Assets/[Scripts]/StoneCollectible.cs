@@ -39,5 +39,6 @@ public class StoneCollectible : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         keyPrompt.SetActive(false);
+        audio.enabled = false;
     }
 }
