@@ -52,7 +52,7 @@ public class TestMovingPlatform : MonoBehaviour
 
             }
             isStoneOnthePlatform = false;
-            collisions.Remove("Stone");
+         collisions.Remove("Stone");
         
         }
         else
@@ -77,7 +77,7 @@ public class TestMovingPlatform : MonoBehaviour
                 isMoveToStart = false;
             }
             
-        }collisions.Remove("Player");
+        }
     }
 
     // Code for the Moving platform behaviour here
@@ -85,70 +85,58 @@ public class TestMovingPlatform : MonoBehaviour
     
     void OnCollisionStay2D(Collision2D other)
     {
-          collisions.Add(other.gameObject.name);  
-         
-        //check if stone is on the platform
-        
-        if (collisions.Contains("Stone"))
+          collisions.Add(other.gameObject.tag);
+
+        if (collisions.Contains("Player") && collisions.Contains("Stone"))
         {
-            Debug.Log($"stone");
             isStoneOnthePlatform = true;
-            
+            massOnthePlatform = 1.5f;
+
         }
         else
         {
-            Debug.Log($"no stone");
-            isStoneOnthePlatform = false;
-        }
-    
-         
-        //check player weight on the platform
-         //massOnthePlatform = 1;
-        if (collisions.Contains("Player"))
-        {
-            if (other.gameObject.CompareTag("Player"))
+            
+            //check if stone is on the platform
+            if (collisions.Contains("Stone"))   
+            {
+                Debug.Log($"stone");
+                isStoneOnthePlatform = true;
+            }
+            else
+            {
+                Debug.Log($"no stone");
+                isStoneOnthePlatform = false;
+            }
+
+            //check if player is on the platform
+            if (collisions.Contains("Player"))   
             {
                 massOnthePlatform = other.gameObject.GetComponent<Rigidbody2D>().mass;
-                Debug.Log($"mass on the platform ={massOnthePlatform}");
-            }else
+            }   
+            else
             {
                 massOnthePlatform = 1;
             }
-        
-        
-            if (massOnthePlatform < 1.0f) //player with balloon
-            {
-                isMoveUp = true;
-            }
-            else if (massOnthePlatform > 1.0f)  //player with stone
-            {
-                isMoveDown = true;
-            }
-            else if (massOnthePlatform == 1.0f) //player without anything (or have stone & balloon)
-            {
-                isMoveToStart = true;
-            }
-            //Debug.Log($"stone on the platform  = { isStoneOnthePlatform}; isMoveUp = { isMoveUp}");
         }
-        else
-        {
-            massOnthePlatform = 1;
-        }
+
+        if (massOnthePlatform < 1.0f) //player with balloon
+                {
+                    isMoveUp = true;
+                }
+                else if (massOnthePlatform > 1.0f)  //player with stone
+                {
+                    isMoveDown = true;
+                }
+                else if (massOnthePlatform == 1.0f) //player without anything (or have stone & balloon)
+                {
+                    isMoveToStart = true;
+                }
     }
 
     public void OnCollisionExit2D(Collision2D other)
     {
-        collisions.Remove(other.gameObject.name);
-       // isStoneOnthePlatform = false;
-       // massOnthePlatform = 1;
-        //if (collisions.Contains("Stone") == false)
-        //{
-        //    isStoneOnthePlatform = false;
-        //}
-        //if (collisions.Contains("Player") == false)
-        //{
-        //    massOnthePlatform = 1;
-        //}
+        collisions.Remove(other.gameObject.tag);
+       
     }
 
         void MoveUp()
