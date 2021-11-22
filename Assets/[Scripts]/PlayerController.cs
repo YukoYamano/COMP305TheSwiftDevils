@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -24,7 +25,7 @@ public class PlayerController : MonoBehaviour
     public float lowJumpMultiplier = 2.5f; //grav multiplier
                                            
     //for Glide level
-    private bool isOntheIce = false;  // to check if Player is on the ice
+    public bool isOntheIce = false;  // to check if Player is on the ice
     public float glidingSpeed =3.0f;
     private float facingCoefficient;
     //end Glide level
@@ -50,15 +51,12 @@ public class PlayerController : MonoBehaviour
         {
             Glide();
             animator.SetBool("isGliding", true);
-            isOntheIce = false;
-
 
         }
         else
         {
             animator.SetBool("isGliding", false);
             Move();
-            isOntheIce = false;
         }
     }
 
@@ -250,17 +248,17 @@ public class PlayerController : MonoBehaviour
 
     //for Glide level
 
-    void OnCollisionStay2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ice"))
-        {
-            isOntheIce = true;
-        }
-        else
-        {
-            isOntheIce = false;
-        }
-    }
+    //void OnCollisionStay2D(Collision2D other)
+    //{
+    //    if (other.gameObject.CompareTag("Ice"))
+    //    {
+    //        isOntheIce = true;
+    //    }
+    //    else
+    //    {
+    //        isOntheIce = false;
+    //    }
+    //}
 
     void Glide()
     {
@@ -272,9 +270,13 @@ public class PlayerController : MonoBehaviour
         {
             facingCoefficient = -1;
         }
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(2f, 0f) * facingCoefficient * glidingSpeed;
+
+         rbody.AddForce(new Vector3(100*glidingSpeed*facingCoefficient, 0, 0));
 
     }
+
+
+
 
 
 
