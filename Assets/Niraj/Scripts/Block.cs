@@ -8,8 +8,8 @@ public class Block : MonoBehaviour
     public Sprite newSprite;
     public GameObject block;
     public GameObject riot;
-   public GameObject Player;
-    public GameObject istrigger;
+    public GameObject Player;
+    
 
 
 
@@ -29,20 +29,15 @@ public class Block : MonoBehaviour
     {
         sRender.sprite = newSprite;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ChngSpr(newSprite);
-
-        }
-
-    }
+    
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Stone")
+        if (Input.GetKeyDown(KeyCode.E) || collision.gameObject.tag == "Stone")
         {
-           
+            
+            
+
+                ChngSpr(newSprite);
                 block.transform.position = new Vector3(0, -2, 0);
                 riot.transform.position = new Vector3(0, -2, 0);
             
