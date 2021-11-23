@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Player_Destroyer : MonoBehaviour
 {
+    public GameObject sizzleAudio;
     //This script is used on all traps that 'kills' the player in one hit.
     [SerializeField] private GameObject player;
    // [SerializeField] private Transform playerSpawnPoint;
@@ -25,8 +26,10 @@ public class Player_Destroyer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Instantiate(sizzleAudio);
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
+
 
         }
         if(other.gameObject.CompareTag("Stone") || other.gameObject.CompareTag("Balloon"))

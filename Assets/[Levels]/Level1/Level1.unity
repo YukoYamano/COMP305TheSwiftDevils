@@ -728,7 +728,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -3
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.014705896, y: 0.014705896, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -66296,7 +66296,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6268744178925452678, guid: afa2d0973f3c8444781e1d3699f36020, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.85
+      value: 1.91
       objectReference: {fileID: 0}
     - target: {fileID: 6268744178925452678, guid: afa2d0973f3c8444781e1d3699f36020, type: 3}
       propertyPath: m_LocalPosition.y
@@ -66472,7 +66472,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696554062640895972, guid: 0890536ba2c4b11458ada88e0f896427, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4696554062640895992, guid: 0890536ba2c4b11458ada88e0f896427, type: 3}
       propertyPath: m_RootOrder
@@ -66919,11 +66919,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659238, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 80.25
+      value: 59.440002
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659238, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 20.0708
+      value: 18.450005
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659256, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_LocalScale.x
@@ -68388,11 +68388,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659238, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 136.11
+      value: 136.59
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659238, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 31.04
+      value: 31.600002
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659256, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_LocalScale.x
@@ -68483,7 +68483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696554062640895972, guid: 0890536ba2c4b11458ada88e0f896427, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4696554062640895992, guid: 0890536ba2c4b11458ada88e0f896427, type: 3}
       propertyPath: m_RootOrder
@@ -68566,7 +68566,7 @@ GameObject:
   - component: {fileID: 1392619932}
   m_Layer: 0
   m_Name: Traps
-  m_TagString: Untagged
+  m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -82945,6 +82945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69845367824ba884d99f62ab8ed4e7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sizzleAudio: {fileID: 6039909873643678169, guid: 3aa4694e738b5dd45a5aa62ba846d557, type: 3}
   player: {fileID: 0}
 --- !u!1001 &1407651830
 PrefabInstance:
@@ -83660,11 +83661,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659238, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 136.11
+      value: 99.850006
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659238, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 31.04
+      value: 30.650002
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659256, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_LocalScale.x
@@ -84086,7 +84087,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659238, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 36.09
+      value: 34.730003
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659256, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_LocalScale.x
@@ -84095,6 +84096,10 @@ PrefabInstance:
     - target: {fileID: 5022291709951659256, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5022291709951659257, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
+      propertyPath: m_TagString
+      value: Seesaw
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
@@ -85180,11 +85185,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659238, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 221.39
+      value: 198.91
       objectReference: {fileID: 0}
     - target: {fileID: 5022291709951659238, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: 65.73
+      value: 64.350006
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c37c95e08ab45954c8e3201af7e5719f, type: 3}
@@ -85262,7 +85267,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8296915002659469804, guid: 6f810a7dcb4f1d445b5703152262c88b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.353469
+      value: -5.790975
       objectReference: {fileID: 0}
     - target: {fileID: 8296915002659469804, guid: 6f810a7dcb4f1d445b5703152262c88b, type: 3}
       propertyPath: m_LocalPosition.y

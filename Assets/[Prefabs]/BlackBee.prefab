@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -3920004906134974178}
   m_Layer: 0
   m_Name: BlackBee
-  m_TagString: Untagged
+  m_TagString: Bee
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,3 +240,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0b0d8c798084d44ab48e91747dc5bdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Collider: {fileID: 0}
+  audio: {fileID: 0}

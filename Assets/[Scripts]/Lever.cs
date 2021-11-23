@@ -9,6 +9,7 @@ public class Lever : MonoBehaviour
     public bool isFanning;
     public Sprite imgOff;
     public Sprite imgOn;
+    public AudioSource audio;
 
     BoxCollider2D fanWind;
     SpriteRenderer activeImg;
@@ -20,6 +21,8 @@ public class Lever : MonoBehaviour
         isFanning = false;
         activeImg = GetComponent<SpriteRenderer>();
         instructions.SetActive(false);
+        audio = GetComponent<AudioSource>();
+        audio.enabled = false;
     }
 
     // Update is called once per frame
@@ -61,10 +64,12 @@ public class Lever : MonoBehaviour
                 //for changing sprites
                 if (isFanning)
                 {
+                    audio.enabled = true;
                     activeImg.sprite = imgOn;
                 }
                 else
                 {
+                    audio.enabled = false;
                     activeImg.sprite = imgOff;
                 }
 
