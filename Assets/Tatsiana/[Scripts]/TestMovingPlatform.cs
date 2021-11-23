@@ -39,14 +39,14 @@ public class TestMovingPlatform : MonoBehaviour
             
             if (isMoveUp)  //if there are stone + player with balloon on the platform => weight =1 =>platform moves to initial position
             {
-                Debug.Log($"Stone on platform. moveUp  = { isMoveUp}");
+                //Debug.Log($"Stone on platform. moveUp  = { isMoveUp}");
                 MoveToStart();
                
 
             }
             else   // in other cases if stone is on the platform, the platform moves down
             {
-                Debug.Log( $"Stone on platform. moveUp  = { isMoveUp}");
+               // Debug.Log( $"Stone on platform. moveUp  = { isMoveUp}");
                 MoveDown();
                
 
@@ -57,7 +57,7 @@ public class TestMovingPlatform : MonoBehaviour
         }
         else
         {
-            Debug.Log($"No stone on platform");
+            //Debug.Log($"No stone on platform");
 
             if (isMoveUp)
             {
@@ -99,12 +99,12 @@ public class TestMovingPlatform : MonoBehaviour
             //check if stone is on the platform
             if (collisions.Contains("Stone"))   
             {
-                Debug.Log($"stone");
+               // Debug.Log($"stone");
                 isStoneOnthePlatform = true;
             }
             else
             {
-                Debug.Log($"no stone");
+              //  Debug.Log($"no stone");
                 isStoneOnthePlatform = false;
             }
 

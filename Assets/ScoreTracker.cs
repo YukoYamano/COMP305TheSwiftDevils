@@ -10,7 +10,7 @@ public class ScoreTracker : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        score = 0;
+        score = LivesStatic.score;
     }
 
     // Update is called once per frame
@@ -21,11 +21,12 @@ public class ScoreTracker : MonoBehaviour
 
     private void UpdateScore()
     {
+        score = LivesStatic.score;
        scoreText.text = score.ToString();
     }
 
     public void addScore(int amount)
     {
-        score += amount;
+        LivesStatic.score += amount;
     }
 }

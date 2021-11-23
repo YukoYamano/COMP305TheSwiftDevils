@@ -8,11 +8,12 @@ public class Player_Destroyer : MonoBehaviour
     public GameObject sizzleAudio;
     //This script is used on all traps that 'kills' the player in one hit.
     [SerializeField] private GameObject player;
-   // [SerializeField] private Transform playerSpawnPoint;
-
+    // [SerializeField] private Transform playerSpawnPoint;
+    PlayerLivesTracker livesTracker;
     // Start is called before the first frame update
     void Start()
     {
+        livesTracker = FindObjectOfType<PlayerLivesTracker>();
 
     }
 
@@ -26,7 +27,10 @@ public class Player_Destroyer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            livesTracker.DecreaseLives();
+
             Instantiate(sizzleAudio);
+
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
 

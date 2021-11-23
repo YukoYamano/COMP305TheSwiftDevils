@@ -7,12 +7,13 @@ public class PlayerLivesTracker : MonoBehaviour
 {
     public GameObject[] hearts = new GameObject[5];
 
-    public int lives = 3;
+    [SerializeField] int lives;
 
     // Start is called before the first frame update
 
     void Start()
     {
+        lives = LivesStatic.playerLives;
         UpdateLivesUI();
 
     }
@@ -30,7 +31,7 @@ public class PlayerLivesTracker : MonoBehaviour
 
     public void DecreaseLives(int amount = 1)
     {
-        lives -= amount;
+        LivesStatic.playerLives -= amount;
         UpdateLivesUI();
         if(lives <= 0)
         {
@@ -40,12 +41,13 @@ public class PlayerLivesTracker : MonoBehaviour
 
     public void IncreaseLives(int amount = 1)
     {
-        lives += amount;
+        LivesStatic.playerLives += amount;
         UpdateLivesUI();
     }
 
     private void UpdateLivesUI()
     {
+        lives = LivesStatic.playerLives;
         for(int i = 0; i < hearts.Length; i++)
         {
             if(i < lives)

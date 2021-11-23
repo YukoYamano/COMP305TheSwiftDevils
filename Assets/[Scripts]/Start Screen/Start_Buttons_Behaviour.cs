@@ -8,6 +8,8 @@ public class Start_Buttons_Behaviour : MonoBehaviour
 {
     public void PlayGame()
     {
+        LivesStatic.score = 0;
+        LivesStatic.playerLives = 3;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

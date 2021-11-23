@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Boulder_Audio_Behaviour : MonoBehaviour
 {
-    public AudioSource audio;
+    private AudioSource audio;
+    public AudioClip clip;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class Boulder_Audio_Behaviour : MonoBehaviour
         if(other.gameObject.CompareTag("Bee"))
         {
             audio.enabled = true;
+            //audio.PlayOneShot(clip);
 
         }
         else if(other.gameObject.CompareTag("Seesaw"))

@@ -27,7 +27,7 @@ public class Water_Trigger : MonoBehaviour
 
     private void OnCollisionStay2D(Collision2D other)
     {
-        Debug.Log("Collision Detected");
+        //Debug.Log("Collision Detected");
         if (other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<Rigidbody2D>().mass > 1)
         {
             Debug.Log("If statement passed");
@@ -45,7 +45,7 @@ public class Water_Trigger : MonoBehaviour
         if (other.CompareTag("Player") && other.gameObject.GetComponent<Rigidbody2D>().mass <= 1)
         {
  
-            other.gameObject.GetComponent<Rigidbody2D>().gravityScale = -0.1f;
+            other.gameObject.GetComponent<Rigidbody2D>().gravityScale = -2.5f;
             //Debug.Log("Rise");
         }
     }
