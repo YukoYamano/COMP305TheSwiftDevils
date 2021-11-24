@@ -39,9 +39,12 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+
         rbody = GetComponent<Rigidbody2D>();
         cCol = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
+
+        transform.position = FindObjectOfType<SpawnTracker>().GetRespawnLocation();
     }
 
     // Fixed Update is called because physics calculations are required
@@ -74,6 +77,8 @@ public class PlayerController : MonoBehaviour
     //Lateral Movement function
     void Move()
     {
+
+        
         float x = Input.GetAxis("Horizontal");
 
         animator.SetFloat("Walking", Mathf.Abs(x));

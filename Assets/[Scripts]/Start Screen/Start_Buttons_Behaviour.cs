@@ -10,6 +10,7 @@ public class Start_Buttons_Behaviour : MonoBehaviour
     {
         LivesStatic.score = 0;
         LivesStatic.playerLives = 3;
+        RespawnPositionStatic.SetSpawnIndex(0);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 

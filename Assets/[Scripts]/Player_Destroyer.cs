@@ -29,7 +29,7 @@ public class Player_Destroyer : MonoBehaviour
         {
             livesTracker.DecreaseLives();
 
-            Instantiate(sizzleAudio);
+            //Instantiate(sizzleAudio);
 
             Scene scene = SceneManager.GetActiveScene();
             SceneManager.LoadScene(scene.name);
