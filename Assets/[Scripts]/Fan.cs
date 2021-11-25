@@ -7,7 +7,6 @@ public class Fan : MonoBehaviour
     //Troubleshooting variables
     [Tooltip("Returns true when applying a force to detected object, DO NOT TOUCH")]
     [SerializeField] private bool applyingForce = false;
-
     //public variables
     [Tooltip("Set true if fan is blowing towards the right -->")]
     public bool blowingRight = true;
