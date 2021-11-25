@@ -21,7 +21,11 @@ public class Balloon : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        MoveBalloon();
+        if (isBlowing)
+        {
+            MoveBalloon();
+        }
+        
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -39,21 +43,21 @@ public class Balloon : MonoBehaviour
 
     private void MoveBalloon()
     {
-        if (isBlowing)
-        {
+        //if (isBlowing)
+        //{
             if (blowingRight)
             {
                 rbody.velocity = new Vector2(1 * speed, rbody.velocity.y);
             }
             else
             {
-                rbody.velocity = new Vector2(0, rbody.velocity.y);
+                rbody.velocity = new Vector2(-1, rbody.velocity.y);
             }
-        }
-        else
-        {
-            rbody.velocity = new Vector2(0, 1);
-        }
+        //}
+        //else
+        //{
+        //    rbody.velocity = new Vector2(0, 1);
+        //}
     }
 
     public void setStatus(bool blowing, bool blowingDirection)
