@@ -61,6 +61,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   balloon: {fileID: 2687940918131117099}
+  speed: 2
 --- !u!1 &2687940918131117099
 GameObject:
   m_ObjectHideFlags: 0

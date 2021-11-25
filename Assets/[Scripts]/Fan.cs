@@ -11,12 +11,8 @@ public class Fan : MonoBehaviour
     //public variables
     [Tooltip("Set true if fan is blowing towards the right -->")]
     public bool blowingRight = true;
-    [Tooltip("The amount of lateral force applied to balloon")]
-    public float windForce = 3.0f;
 
 
-
-    private Rigidbody2D balloonRbody;
     Animator anim;
 
 
@@ -24,25 +20,11 @@ public class Fan : MonoBehaviour
     void Start()
     {
         anim = GetComponentInChildren<Animator>();
-
-        //switches the direction of force being applied
-        if(blowingRight)
-        {
-            windForce *= 1;
-        }
-        else
-        {
-            windForce *= -1;
-        }
         
     }
 
     void FixedUpdate()
-    {
-        if (applyingForce)
-        {
-            AddForce(balloonRbody);
-        }
+    { 
 
     }
 
@@ -51,17 +33,14 @@ public class Fan : MonoBehaviour
         UpdateAnimation();
     }
 
-    private void AddForce(Rigidbody2D rbodyOther)
-    {
-        rbodyOther.AddForce(new Vector2(1 * windForce, 0));
-    }
 
 
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("Balloon"))
         {
-            balloonRbody = collision.gameObject.GetComponent<Rigidbody2D>();
+            collision.gameObject.GetComponentInChildren<Balloon>().setStatus(true, blowingRight);
+
             applyingForce = true;
         }
     }
@@ -71,6 +50,8 @@ public class Fan : MonoBehaviour
     {
         if (collision.CompareTag("Balloon"))
         {
+            collision.gameObject.GetComponentInChildren<Balloon>().setStatus(false, blowingRight);
+
             applyingForce = false;
         }
     }
@@ -84,6 +65,23 @@ public class Fan : MonoBehaviour
         }
         else { anim.SetBool("isBlowing", false); }
     }
+
+//    private void ApplyForce(Rigidbody2D rbody)
+//    {
+//        if (blowingRight)
+//        {
+//            rbody.velocity = new Vector2(1 * speed, rbody.velocity.y);
+//        }
+//        else
+//        {
+//            rbody.velocity = new Vector2(-1 * speed, rbody.velocity.y);
+//        }
+//    }
+
+//    private void StopApplyForce(Rigidbody2D rbody)
+//    {
+//        rbody.velocity = new Vector2(0 * speed, rbody.velocity.y);
+//    }
 
 }
 
