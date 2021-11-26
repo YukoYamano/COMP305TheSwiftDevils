@@ -50,7 +50,7 @@ public class Fan : MonoBehaviour
         if (collision.CompareTag("Balloon"))
         {
             collision.gameObject.GetComponentInChildren<Balloon>().setStatus(false, blowingRight);
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1);
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(collision.gameObject.GetComponent<Rigidbody2D>().velocity.x*0.5f, 1);
 
             applyingForce = false;
         }

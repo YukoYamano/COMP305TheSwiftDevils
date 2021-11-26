@@ -5,7 +5,6 @@ using UnityEngine;
 public class Balloon : MonoBehaviour
 {
     [SerializeField] GameObject balloon;
-    public int speed = 4;
     private bool isBlowing;
     private bool blowingRight;
 
@@ -47,7 +46,7 @@ public class Balloon : MonoBehaviour
         //{
             if (blowingRight)
             {
-                rbody.velocity = new Vector2(1 * speed, rbody.velocity.y);
+                rbody.velocity = new Vector2(1, rbody.velocity.y);
             }
             else
             {
