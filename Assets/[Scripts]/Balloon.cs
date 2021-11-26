@@ -5,9 +5,8 @@ using UnityEngine;
 public class Balloon : MonoBehaviour
 {
     [SerializeField] GameObject balloon;
-    public int speed = 4;
-    private bool isBlowing;
-    private bool blowingRight;
+    [SerializeField] private bool isBlowing;
+    [SerializeField] private bool blowingRight;
 
     Rigidbody2D rbody;
 
@@ -25,7 +24,11 @@ public class Balloon : MonoBehaviour
         {
             MoveBalloon();
         }
-        
+        else
+        {
+            rbody.velocity = new Vector2(0, 1);
+        }
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -47,17 +50,14 @@ public class Balloon : MonoBehaviour
         //{
             if (blowingRight)
             {
-                rbody.velocity = new Vector2(1 * speed, rbody.velocity.y);
+                rbody.velocity = new Vector2(1, rbody.velocity.y);
             }
             else
             {
                 rbody.velocity = new Vector2(-1, rbody.velocity.y);
             }
         //}
-        //else
-        //{
-        //    rbody.velocity = new Vector2(0, 1);
-        //}
+        //
     }
 
     public void setStatus(bool blowing, bool blowingDirection)

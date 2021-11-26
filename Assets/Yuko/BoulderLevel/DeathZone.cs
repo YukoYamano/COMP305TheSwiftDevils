@@ -26,10 +26,10 @@ public class DeathZone : MonoBehaviour
             Instantiate(boulder, boulderSpawnPoint.position, Quaternion.identity);
             Destroy(other.gameObject);
         }
-        else
-        {
-            Destroy(other.gameObject);
-        }
+        //else
+        //{
+        //    Destroy(other.gameObject);
+        //}
            
 
     }

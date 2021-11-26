@@ -49,9 +49,8 @@ public class Fan : MonoBehaviour
     {
         if (collision.CompareTag("Balloon"))
         {
-            collision.gameObject.GetComponentInChildren<Balloon>().setStatus(false, blowingRight);
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 1);
-
+            Balloon balloon = collision.gameObject.GetComponentInChildren<Balloon>();
+            StartCoroutine("StopBlowing", balloon);
             applyingForce = false;
         }
     }
@@ -82,6 +81,15 @@ public class Fan : MonoBehaviour
 //    {
 //        rbody.velocity = new Vector2(0 * speed, rbody.velocity.y);
 //    }
+
+    private IEnumerator StopBlowing(Balloon balloon)
+    {
+        
+        yield return new WaitForSeconds(.8f);
+
+        balloon.setStatus(false, blowingRight);
+
+    }
 
 }
 
