@@ -215,6 +215,7 @@ public class PlayerController : MonoBehaviour
 
             rbody.mass += massChange;
             Instantiate(balloon, balloonSprite.transform.position, Quaternion.identity);
+            Sound_Manager.PlaySound("dropItem");
             isHoldingBalloon = false;
 
         }
@@ -226,6 +227,7 @@ public class PlayerController : MonoBehaviour
         {
             rbody.mass -= massChange;
             Instantiate(stone, stoneSprite.transform.position, Quaternion.identity);
+            Sound_Manager.PlaySound("dropItem");
             isHoldingStone = false;
         }
     }

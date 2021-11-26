@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Balloon_Audio_Behaviour : MonoBehaviour
 {
-    public GameObject popAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +21,7 @@ public class Balloon_Audio_Behaviour : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Spike"))
         {
-            Instantiate(popAudio);
+            Sound_Manager.PlaySound("balloonPop");
         }
         
     }

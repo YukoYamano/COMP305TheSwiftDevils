@@ -5,13 +5,10 @@ using UnityEngine;
 public class StoneCollectible : MonoBehaviour
 {
     [SerializeField] GameObject keyPrompt;
-    public AudioSource audio;
     // Start is called before the first frame update
     void Start()
     {
         keyPrompt.SetActive(false);
-        audio = GetComponent<AudioSource>();
-        audio.enabled = false;
     }
 
     // Update is called once per frame
@@ -24,7 +21,7 @@ public class StoneCollectible : MonoBehaviour
     {
         if (collision.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
-            audio.enabled = true;
+            Sound_Manager.PlaySound("pickUpItem");
             collision.GetComponent<PlayerController>().GetStone();
 
         }
@@ -39,6 +36,5 @@ public class StoneCollectible : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         keyPrompt.SetActive(false);
-        audio.enabled = false;
     }
 }
