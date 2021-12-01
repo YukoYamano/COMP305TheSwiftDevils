@@ -9,6 +9,7 @@ public class Lever : MonoBehaviour
     public bool isFanning;
     public Sprite imgOff;
     public Sprite imgOn;
+    private float timer = 3;
 
     BoxCollider2D fanWind;
     SpriteRenderer activeImg;
@@ -19,6 +20,8 @@ public class Lever : MonoBehaviour
         fanWind = fan.GetComponent<BoxCollider2D>();
         isFanning = false;
         activeImg = GetComponent<SpriteRenderer>();
+        activeImg.sprite = imgOff;
+        timer = 0;
         instructions.SetActive(false);
     }
 
@@ -26,6 +29,7 @@ public class Lever : MonoBehaviour
     void Update()
     {
         CheckInputs();
+        StartCountdown();
     }
 
 
@@ -55,24 +59,52 @@ public class Lever : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                isFanning = !isFanning;
-                fanWind.enabled = isFanning;
-
-                //for changing sprites
                 if (isFanning)
                 {
-                    Sound_Manager.PlaySound("fan");
-                    activeImg.sprite = imgOn;
+                    StopFan();
                 }
                 else
                 {
-                    Sound_Manager.PlaySound("");
-                    activeImg.sprite = imgOff;
+                    StartFan();
                 }
 
             }
         }
 
     }
+
+    private void StartCountdown()
+    {
+        if(timer > 0 && isFanning)
+        {
+            timer -= Time.deltaTime;
+        }
+        else if(timer <= 0 && isFanning)
+        {
+            StopFan();
+        }
+
+    }
+
+    private void StartFan()
+    {
+        timer = 10;
+        isFanning = true;
+        fanWind.enabled = true;
+        Sound_Manager.PlaySound("fan");
+        activeImg.sprite = imgOn;
+
+    }
+
+    private void StopFan()
+    {
+        timer = 0;
+        isFanning = false;
+        fanWind.enabled = false;
+        Sound_Manager.PlaySound("");
+        activeImg.sprite = imgOff;
+        StartCountdown();
+    }
+ 
 
 }

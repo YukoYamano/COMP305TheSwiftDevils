@@ -65,23 +65,6 @@ public class Fan : MonoBehaviour
         else { anim.SetBool("isBlowing", false); }
     }
 
-//    private void ApplyForce(Rigidbody2D rbody)
-//    {
-//        if (blowingRight)
-//        {
-//            rbody.velocity = new Vector2(1 * speed, rbody.velocity.y);
-//        }
-//        else
-//        {
-//            rbody.velocity = new Vector2(-1 * speed, rbody.velocity.y);
-//        }
-//    }
-
-//    private void StopApplyForce(Rigidbody2D rbody)
-//    {
-//        rbody.velocity = new Vector2(0 * speed, rbody.velocity.y);
-//    }
-
     private IEnumerator StopBlowing(Balloon balloon)
     {
         
