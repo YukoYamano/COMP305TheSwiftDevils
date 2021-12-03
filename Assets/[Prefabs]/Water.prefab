@@ -3752,7 +3752,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.014705896, y: 0.014705896, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -4234,7 +4234,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.014705896, y: 0.014705896, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -4272,6 +4272,7 @@ Transform:
   - {fileID: 1074824425567825847}
   - {fileID: 1587072518552107683}
   - {fileID: 1074824425553479859}
+  - {fileID: 2343081313808482274}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4418,4 +4419,66 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1796057821286916838, guid: 0a10b702e341f54459107a8a01773e1b, type: 3}
   m_PrefabInstance: {fileID: 1587072519554804309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6920672119810596214
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1907806528746841663}
+    m_Modifications:
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4893743526739707809, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+      propertyPath: m_Name
+      value: Water Audio Trigger
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+--- !u!4 &2343081313808482274 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4652049821520781972, guid: 6096d1d5e060cda4ca31cfb9d3635abd, type: 3}
+  m_PrefabInstance: {fileID: 6920672119810596214}
   m_PrefabAsset: {fileID: 0}

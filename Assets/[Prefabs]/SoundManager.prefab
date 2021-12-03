@@ -84,3 +84,13 @@ MonoBehaviour:
     volume: 0.2
     loop: 1
     source: {fileID: 0}
+  - name: water
+    clip: {fileID: 8300000, guid: 53e2c966fc0085c4ca19ddb5689a01b4, type: 3}
+    volume: 0.5
+    loop: 1
+    source: {fileID: 0}
+  - name: lava
+    clip: {fileID: 8300000, guid: 2c7a1478213980a47a0feb2c93ac2e71, type: 3}
+    volume: 0.7
+    loop: 1
+    source: {fileID: 0}
