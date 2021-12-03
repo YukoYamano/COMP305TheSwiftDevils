@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1582974799763283806}
-  - component: {fileID: 6901853562055099187}
   - component: {fileID: 7605020732496885648}
   m_Layer: 0
   m_Name: SoundManager
@@ -32,102 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &6901853562055099187
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3966979621239512424}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
-  m_Volume: 0.5
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &7605020732496885648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,3 +43,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53be3e57a10b09349b6ba91bc21d00a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sounds:
+  - name: pickUpItem
+    clip: {fileID: 8300000, guid: fdb25f086bc1f2e49b0d0d7c5baf0ac6, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: dropItem
+    clip: {fileID: 8300000, guid: 620b0345c3418144ab42a59fff8b9117, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: fan
+    clip: {fileID: 8300000, guid: 66f4def009f932b4ba8df354e4753ae7, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: coinPickUp
+    clip: {fileID: 8300000, guid: fa7cfcb30be977f459feb846506f9a4c, type: 3}
+    volume: 0.3
+    loop: 0
+    source: {fileID: 0}
+  - name: balloonPop
+    clip: {fileID: 8300000, guid: be598d49a263cc44494b0e1420e4734f, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: door
+    clip: {fileID: 8300000, guid: 294639b93148ea342ad0ed3e5a7eae17, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: bee
+    clip: {fileID: 8300000, guid: 0740ee35bd32ae342a8d2866aebc3795, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: boulder_drop
+    clip: {fileID: 8300000, guid: 710a05047072d9146a3477d69961b73c, type: 3}
+    volume: 0.2
+    loop: 1
+    source: {fileID: 0}

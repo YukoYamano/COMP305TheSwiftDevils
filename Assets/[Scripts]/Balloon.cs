@@ -37,6 +37,7 @@ public class Balloon : MonoBehaviour
         {
             if (collision.GetComponent<PlayerController>().isHoldingBalloon == false)
             {
+                FindObjectOfType<Sound_Manager>().Play("pickUpItem");
                 collision.GetComponent<PlayerController>().GetBalloon();
                 Destroy(balloon);
             }

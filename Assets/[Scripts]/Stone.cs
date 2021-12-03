@@ -25,6 +25,7 @@ public class Stone : MonoBehaviour
         {
             if (collision.GetComponent<PlayerController>().isHoldingStone == false)
             {
+                FindObjectOfType<Sound_Manager>().Play("pickUpItem");
                 collision.GetComponent<PlayerController>().GetStone();
                 Destroy(stone);
             }

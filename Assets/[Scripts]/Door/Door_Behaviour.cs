@@ -18,12 +18,17 @@ public class Door_Behaviour : MonoBehaviour
     {
         
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        FindObjectOfType<Sound_Manager>().Play("door");
+    }
     public void OnTriggerStay2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
             prompt.GetComponent<MeshRenderer>().enabled = true;
-            Sound_Manager.PlaySound("door");
+            
         }
         if(other.CompareTag("Player") && Input.GetAxis("Fire1") > 0)
         {

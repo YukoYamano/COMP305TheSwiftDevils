@@ -91,7 +91,7 @@ public class Lever : MonoBehaviour
         timer = 10;
         isFanning = true;
         fanWind.enabled = true;
-        Sound_Manager.PlaySound("fan");
+        FindObjectOfType<Sound_Manager>().Play("fan");
         activeImg.sprite = imgOn;
 
     }
@@ -101,7 +101,7 @@ public class Lever : MonoBehaviour
         timer = 0;
         isFanning = false;
         fanWind.enabled = false;
-        Sound_Manager.PlaySound("");
+        FindObjectOfType<Sound_Manager>().Stop("fan");
         activeImg.sprite = imgOff;
         StartCountdown();
     }

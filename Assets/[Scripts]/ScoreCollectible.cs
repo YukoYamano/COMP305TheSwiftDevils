@@ -24,7 +24,7 @@ public class ScoreCollectible : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             scoreTracker.addScore(points);
-            Sound_Manager.PlaySound("coinPickUp");
+            FindObjectOfType<Sound_Manager>().Play("coinPickUp");
             Destroy(gameObject);
         }
     }

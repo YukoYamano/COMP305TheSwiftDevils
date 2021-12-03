@@ -72344,18 +72344,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 313718116}
     m_Modifications:
-    - target: {fileID: -8769563870744042266, guid: afa2d0973f3c8444781e1d3699f36020, type: 3}
-      propertyPath: Mute
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8769563870744042266, guid: afa2d0973f3c8444781e1d3699f36020, type: 3}
-      propertyPath: m_Volume
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8769563870744042266, guid: afa2d0973f3c8444781e1d3699f36020, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6268744178925452677, guid: afa2d0973f3c8444781e1d3699f36020, type: 3}
       propertyPath: m_FlipX
       value: 0
@@ -73651,7 +73639,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23685455, y: 0.0038833618}
+  m_Offset: {x: 0.006134033, y: 0.6402607}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -73662,7 +73650,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3375092, y: 2.001793}
+  m_Size: {x: 4.2862854, y: 3.2745476}
   m_EdgeRadius: 0
 --- !u!1001 &1098426798
 PrefabInstance:

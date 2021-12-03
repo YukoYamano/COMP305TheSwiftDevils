@@ -94247,6 +94247,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: SoundManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7605020732496885648, guid: 0073cf60a51e65b4aaacfb07e527b05f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605020732496885648, guid: 0073cf60a51e65b4aaacfb07e527b05f, type: 3}
+      propertyPath: sounds.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605020732496885648, guid: 0073cf60a51e65b4aaacfb07e527b05f, type: 3}
+      propertyPath: sounds.Array.data[0].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fdb25f086bc1f2e49b0d0d7c5baf0ac6, type: 3}
+    - target: {fileID: 7605020732496885648, guid: 0073cf60a51e65b4aaacfb07e527b05f, type: 3}
+      propertyPath: sounds.Array.data[0].name
+      value: pickUpItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605020732496885648, guid: 0073cf60a51e65b4aaacfb07e527b05f, type: 3}
+      propertyPath: sounds.Array.data[1].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: c29aa952f7a01e449b9a3d907b6552de, type: 3}
+    - target: {fileID: 7605020732496885648, guid: 0073cf60a51e65b4aaacfb07e527b05f, type: 3}
+      propertyPath: sounds.Array.data[1].name
+      value: coinPickUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605020732496885648, guid: 0073cf60a51e65b4aaacfb07e527b05f, type: 3}
+      propertyPath: sounds.Array.data[0].pitch
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605020732496885648, guid: 0073cf60a51e65b4aaacfb07e527b05f, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7605020732496885648, guid: 0073cf60a51e65b4aaacfb07e527b05f, type: 3}
+      propertyPath: sounds.Array.data[1].volume
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0073cf60a51e65b4aaacfb07e527b05f, type: 3}
 --- !u!1 &1825162755

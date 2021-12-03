@@ -21,7 +21,7 @@ public class Balloon_Audio_Behaviour : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Spike"))
         {
-            Sound_Manager.PlaySound("balloonPop");
+            FindObjectOfType<Sound_Manager>().Play("balloonPop");
         }
         
     }

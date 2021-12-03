@@ -4,41 +4,33 @@ using UnityEngine;
 
 public class Boulder_Audio_Behaviour : MonoBehaviour
 {
-    private AudioSource audio;
-    public AudioClip clip;
     // Start is called before the first frame update
     void Start()
     {
-        audio = GetComponent<AudioSource>();
-        audio.enabled = false;
-        audio.mute = true;
-
+        FindObjectOfType<Sound_Manager>().Stop("boulder_drop");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if(other.gameObject.CompareTag("Bee"))
+        if (other.gameObject.CompareTag("Bee"))
         {
-            audio.enabled = true;
-            //audio.PlayOneShot(clip);
 
-        }
-        else if(other.gameObject.CompareTag("Seesaw"))
-        {
-            audio.enabled=false;
+            FindObjectOfType<Sound_Manager>().Play("boulder_drop");
+
+
         }
     }
 
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            audio.mute = false;
+            FindObjectOfType<Sound_Manager>().Stop("boulder_drop");
         }
+
     }
 }

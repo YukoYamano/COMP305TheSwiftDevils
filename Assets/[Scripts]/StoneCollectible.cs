@@ -21,7 +21,7 @@ public class StoneCollectible : MonoBehaviour
     {
         if (collision.CompareTag("Player") && Input.GetKey(KeyCode.E))
         {
-            Sound_Manager.PlaySound("pickUpItem");
+            FindObjectOfType<Sound_Manager>().Play("pickUpItem");
             collision.GetComponent<PlayerController>().GetStone();
 
         }

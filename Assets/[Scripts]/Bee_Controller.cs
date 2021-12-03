@@ -5,13 +5,11 @@ using UnityEngine;
 public class Bee_Controller : MonoBehaviour
 {
     public Collider2D Collider;
-    public AudioSource audio;
+
     // Start is called before the first frame update
     void Start()
     {
         Collider = GetComponent<Collider2D>();
-        audio = GetComponent<AudioSource>();
-        audio.volume = 0f;
     }
 
     // Update is called once per frame
@@ -19,18 +17,18 @@ public class Bee_Controller : MonoBehaviour
     {
         
     }
-    private void OnTriggerStay2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Player"))
         {
-            audio.volume = 0.7f;
+            FindObjectOfType<Sound_Manager>().Play("bee");
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            audio.volume = 0f;
+            FindObjectOfType<Sound_Manager>().Stop("bee");
         }
     }
 }
