@@ -94,3 +94,18 @@ MonoBehaviour:
     volume: 0.7
     loop: 1
     source: {fileID: 0}
+  - name: heart
+    clip: {fileID: 8300000, guid: be5c334d5be1a474dbbd5cc841a8c40c, type: 3}
+    volume: 0.7
+    loop: 0
+    source: {fileID: 0}
+  - name: jump
+    clip: {fileID: 8300000, guid: e7bc49dfbf94b154e8177794715c97b4, type: 3}
+    volume: 0.7
+    loop: 0
+    source: {fileID: 0}
+  - name: barrier
+    clip: {fileID: 8300000, guid: 4f01a6e473ee5f04f8fbff920c4ffd2e, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}

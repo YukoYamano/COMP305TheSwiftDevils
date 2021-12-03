@@ -34,6 +34,8 @@ public class BalloonButton : MonoBehaviour
             //Set to pressed state
             activeImg.sprite = pressed;
 
+            FindObjectOfType<Sound_Manager>().Play("barrier");
+
             //remove blocks
             Destroy(destructableObj);
 

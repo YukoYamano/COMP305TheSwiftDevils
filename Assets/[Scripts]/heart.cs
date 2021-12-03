@@ -22,6 +22,7 @@ public class heart : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            FindObjectOfType<Sound_Manager>().Play("heart");
             livesTracker.IncreaseLives(1);
             Destroy(gameObject);
         }

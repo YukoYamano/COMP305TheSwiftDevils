@@ -118,6 +118,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rbody.velocity = new Vector2(rbody.velocity.x, 0);
+            FindObjectOfType<Sound_Manager>().Play("jump");
             rbody.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
 
         }
