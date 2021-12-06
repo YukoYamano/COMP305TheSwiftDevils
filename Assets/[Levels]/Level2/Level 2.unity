@@ -850,11 +850,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 99.8993
+      value: 99.76
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.5
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1061,6 +1061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraToActivate: {fileID: 883657951}
   cameraOut: {fileID: 284856925}
+  zoomTime: 7
   vCamController: {fileID: 492060182}
 --- !u!61 &192462659
 BoxCollider2D:
@@ -90004,7 +90005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7217116
+      value: 2.1878567
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -90012,7 +90013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.61
+      value: -2.8947
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -90425,6 +90426,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraToActivate: {fileID: 293197994}
   cameraOut: {fileID: 284856925}
+  zoomTime: 2.5
   vCamController: {fileID: 492060182}
 --- !u!61 &527442905
 BoxCollider2D:
@@ -92301,19 +92303,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.832379
+      value: 1.7301322
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7217116
+      value: 2.1894004
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.52317
+      value: 8.9515
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.55
+      value: -2.95
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -93404,6 +93406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraToActivate: {fileID: 1852332979}
   cameraOut: {fileID: 284856925}
+  zoomTime: 7
   vCamController: {fileID: 492060182}
 --- !u!61 &1202624108
 BoxCollider2D:
@@ -94027,7 +94030,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7217116
+      value: 2.197354
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -94035,7 +94038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.67
+      value: -2.8832002
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -94728,8 +94731,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1474249956}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 139.39616, y: 12.110279, z: -811.1}
-  m_LocalScale: {x: 2.2470655, y: 1.4049134, z: 1}
+  m_LocalPosition: {x: 139.39616, y: 12.2226, z: -811.1}
+  m_LocalScale: {x: 2.2470655, y: 1.8427771, z: 1}
   m_Children: []
   m_Father: {fileID: 913454054}
   m_RootOrder: 6
@@ -96662,7 +96665,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8296915002659469804, guid: 6f810a7dcb4f1d445b5703152262c88b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -39.698704
+      value: -37.808083
       objectReference: {fileID: 0}
     - target: {fileID: 8296915002659469804, guid: 6f810a7dcb4f1d445b5703152262c88b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -96748,6 +96751,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraToActivate: {fileID: 905879098}
   cameraOut: {fileID: 284856925}
+  zoomTime: 2.5
   vCamController: {fileID: 492060182}
 --- !u!61 &1787165844
 BoxCollider2D:
@@ -97010,7 +97014,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.5714285, y: 1}
+    m_SensorSize: {x: 1.8077544, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -97330,7 +97334,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.2
+      value: -3.5500002
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -106433,7 +106437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.7217116
+      value: 2.1060543
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -106441,7 +106445,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.47
+      value: -3.5205002
       objectReference: {fileID: 0}
     - target: {fileID: 4981827154733604552, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_LocalPosition.z
