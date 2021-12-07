@@ -252,7 +252,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.014705896, y: 0.014705896, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -2072,7 +2072,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.007936537, y: 0.007936537, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
@@ -3340,12 +3340,40 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skybackground
       objectReference: {fileID: 0}
+    - target: {fileID: 6730149563876606674, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7861342543335001351, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
       propertyPath: m_SortingOrder
       value: -2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
+--- !u!1 &781012533 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6730149563876606674, guid: 6ba04f8f96a9bdb48a7f6d6ad7b534e3, type: 3}
+  m_PrefabInstance: {fileID: 699986293}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &781012534
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781012533}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5403b97cb6258c64089ef02d3ad3ce88, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &811530706
 GameObject:
   m_ObjectHideFlags: 0
@@ -4025,7 +4053,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
+  m_ChunkCullingBounds: {x: 0.014705896, y: 0.014705896, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
