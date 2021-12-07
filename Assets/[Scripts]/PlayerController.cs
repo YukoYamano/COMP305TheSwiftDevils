@@ -28,6 +28,8 @@ public class PlayerController : MonoBehaviour
     public bool isOntheIce = false;  // to check if Player is on the ice
     public float glidingSpeed =3.0f;
     private float facingCoefficient;
+    private bool isInWater = false;
+    public ParticleSystem swimBubbles;
     //end Glide level
 
     //additional distance to cast
@@ -43,7 +45,7 @@ public class PlayerController : MonoBehaviour
         rbody = GetComponent<Rigidbody2D>();
         cCol = GetComponent<CapsuleCollider2D>();
         animator = GetComponent<Animator>();
-
+        swimBubbles = GetComponentInChildren<ParticleSystem>();
         transform.position = FindObjectOfType<SpawnTracker>().GetRespawnLocation();
     }
 
@@ -58,8 +60,25 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            animator.SetBool("isGliding", false);
-            Move();
+            if (isInWater)
+            {    
+                animator.SetBool("isInWater", true);
+                Debug.Log("in Water" + isInWater);
+                Move();
+                if (!swimBubbles.isPlaying)
+                {
+                 CreateSwimBubbles();
+                }
+                
+            }
+            else
+            {
+                animator.SetBool("isGliding", false);
+                animator.SetBool("isInWater", false);
+                Move();
+                Debug.Log("in Water" + isInWater);
+                StopSwimBubbles();
+            }
         }
     }
 
@@ -149,7 +168,16 @@ public class PlayerController : MonoBehaviour
         else
         {
             isGrounded = false;
-            animator.SetBool("isJumping", true);
+            if(isInWater)
+            {
+                isInWater = true;
+                animator.SetBool("isJumping", false);
+            }
+            else
+            {
+                animator.SetBool("isJumping", true);
+            }
+            
         }
 
 
@@ -254,19 +282,29 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    //for Glide level
+    //for Water
 
-    //void OnCollisionStay2D(Collision2D other)
-    //{
-    //    if (other.gameObject.CompareTag("Ice"))
-    //    {
-    //        isOntheIce = true;
-    //    }
-    //    else
-    //    {
-    //        isOntheIce = false;
-    //    }
-    //}
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Water"))
+        {
+            isInWater = true;
+        }
+        else
+        {
+            isInWater = false;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Water"))
+        {
+            isInWater = false;
+        }
+
+    }
+
 
     void Glide()
     {
@@ -283,8 +321,15 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void CreateSwimBubbles()
+    {
+        swimBubbles.Play();
+    }
 
-
+    public void StopSwimBubbles()
+    {
+        swimBubbles.Stop();
+    }
 
 
 
