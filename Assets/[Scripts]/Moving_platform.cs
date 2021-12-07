@@ -84,7 +84,7 @@ public class Moving_platform : MonoBehaviour
         //check if stone is on the platform
         if (other.gameObject.CompareTag("Stone"))
         {
-            Debug.Log($"stone");
+            //Debug.Log($"stone");
             isStoneOnthePlatform = true;
         }
         else
