@@ -363,6 +363,8 @@ GameObject:
   - component: {fileID: 734924817}
   - component: {fileID: 734924819}
   - component: {fileID: 734924818}
+  - component: {fileID: 734924820}
+  - component: {fileID: 734924821}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -427,6 +429,44 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 734924816}
   m_CullTransparentMesh: 1
+--- !u!95 &734924820
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734924816}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!320 &734924821
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734924816}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 970f4f28ff0dcea4baf11b194172aa8c, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: -8713074728227729149, guid: 970f4f28ff0dcea4baf11b194172aa8c, type: 2}
+    value: {fileID: 734924820}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1 &973319346
 GameObject:
   m_ObjectHideFlags: 0
@@ -847,5 +887,7 @@ PlayableDirector:
   m_SceneBindings:
   - key: {fileID: -5385861751388466955, guid: 02c38d587374c2c4996fd528c152679b, type: 2}
     value: {fileID: 1888413866}
+  - key: {fileID: 0}
+    value: {fileID: 734924820}
   m_ExposedReferences:
     m_References: []
