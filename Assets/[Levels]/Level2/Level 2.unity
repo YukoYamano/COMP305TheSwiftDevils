@@ -96685,7 +96685,19 @@ PrefabInstance:
     - target: {fileID: 1720111300, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1720111301, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
+      propertyPath: UVModule.mode
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1720111301, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
+      propertyPath: UVModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720111301, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 57505f9a643084c45b23c342cbf36972, type: 3}
     - target: {fileID: 9161066600407121234, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: m_Name
       value: Player
@@ -97149,7 +97161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8296915002659469804, guid: 6f810a7dcb4f1d445b5703152262c88b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -38.056427
+      value: -41.60347
       objectReference: {fileID: 0}
     - target: {fileID: 8296915002659469804, guid: 6f810a7dcb4f1d445b5703152262c88b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -97498,7 +97510,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7767123, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

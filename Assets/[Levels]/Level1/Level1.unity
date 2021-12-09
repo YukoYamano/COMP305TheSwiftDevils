@@ -73246,8 +73246,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69845367824ba884d99f62ab8ed4e7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizzleAudio: {fileID: 6039909873643678169, guid: 3aa4694e738b5dd45a5aa62ba846d557, type: 3}
-  player: {fileID: 1508462987}
 --- !u!66 &806430524
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -75361,21 +75359,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1672919109}
     m_Modifications:
+    - target: {fileID: 395838061292874368, guid: 07147c533ead28e4da1940f4af92c95f, type: 3}
+      propertyPath: speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 395838061777841091, guid: 07147c533ead28e4da1940f4af92c95f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.51
+      value: -1.07
       objectReference: {fileID: 0}
     - target: {fileID: 395838061777841091, guid: 07147c533ead28e4da1940f4af92c95f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.89
+      value: 1.19
       objectReference: {fileID: 0}
     - target: {fileID: 395838062238562399, guid: 07147c533ead28e4da1940f4af92c95f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.08
+      value: 1.96
       objectReference: {fileID: 0}
     - target: {fileID: 395838062238562399, guid: 07147c533ead28e4da1940f4af92c95f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7
+      value: 1.19
       objectReference: {fileID: 0}
     - target: {fileID: 395838062716651626, guid: 07147c533ead28e4da1940f4af92c95f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -75403,7 +75405,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 395838062753740550, guid: 07147c533ead28e4da1940f4af92c95f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 12.5
+      value: 11.41
       objectReference: {fileID: 0}
     - target: {fileID: 395838062753740550, guid: 07147c533ead28e4da1940f4af92c95f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -95575,8 +95577,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69845367824ba884d99f62ab8ed4e7a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sizzleAudio: {fileID: 6039909873643678169, guid: 3aa4694e738b5dd45a5aa62ba846d557, type: 3}
-  player: {fileID: 1508462987}
 --- !u!1001 &1407651830
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96161,11 +96161,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2601540706793179087, guid: 01612a84cdc5f924d83e3e72d8f7ddc0, type: 3}
   m_PrefabInstance: {fileID: 1473035721}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1508462987 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9161066600407121234, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
-  m_PrefabInstance: {fileID: 1050297970}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1535417226
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96657,7 +96652,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1672919109
 Transform:
   m_ObjectHideFlags: 0
@@ -99169,7 +99164,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8296915002659469804, guid: 6f810a7dcb4f1d445b5703152262c88b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -6.8822937
+      value: -8.780016
       objectReference: {fileID: 0}
     - target: {fileID: 8296915002659469804, guid: 6f810a7dcb4f1d445b5703152262c88b, type: 3}
       propertyPath: m_LocalPosition.y

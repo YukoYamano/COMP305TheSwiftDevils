@@ -61,11 +61,7 @@ public class EnemyBehaviour : MonoBehaviour
             {
                 StartCoroutine(Turn());
             }
-        }
-
-
-
-        
+        }        
     }
 
 
