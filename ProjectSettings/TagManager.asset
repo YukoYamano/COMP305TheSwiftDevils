@@ -18,6 +18,7 @@ TagManager:
   - Bee
   - Seesaw
   - Enemy
+  - Water
   layers:
   - Default
   - TransparentFX

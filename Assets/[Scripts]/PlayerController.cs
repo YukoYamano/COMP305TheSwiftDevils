@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
             if (isInWater)
             {    
                 animator.SetBool("isInWater", true);
-                Debug.Log("in Water" + isInWater);
+                //Debug.Log("in Water" + isInWater);
                 Move();
                 if (!swimBubbles.isPlaying)
                 {
@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
                 animator.SetBool("isGliding", false);
                 animator.SetBool("isInWater", false);
                 Move();
-                Debug.Log("in Water" + isInWater);
+                //Debug.Log("in Water" + isInWater);
                 StopSwimBubbles();
             }
         }

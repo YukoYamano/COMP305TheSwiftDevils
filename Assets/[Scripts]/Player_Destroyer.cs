@@ -5,14 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Player_Destroyer : MonoBehaviour
 {
-    public GameObject sizzleAudio;
     //This script is used on all traps that 'kills' the player in one hit.
-    [SerializeField] private GameObject player;
+
     // [SerializeField] private Transform playerSpawnPoint;
     PlayerLivesTracker livesTracker;
+
+    private bool removingLife;
     // Start is called before the first frame update
     void Start()
     {
+        removingLife = false;
         livesTracker = FindObjectOfType<PlayerLivesTracker>();
 
     }
@@ -27,18 +29,30 @@ public class Player_Destroyer : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            livesTracker.DecreaseLives();
 
-            //Instantiate(sizzleAudio);
+            StartCoroutine(RemoveLife());
 
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
 
 
         }
         if(other.gameObject.CompareTag("Stone") || other.gameObject.CompareTag("Balloon"))
         {
             Destroy(other.gameObject);
+        }
+        
+    }
+
+    IEnumerator RemoveLife()
+    {
+        Debug.Log("Remove Life called");
+        if (removingLife == false)
+        {
+            removingLife = true;
+            livesTracker.DecreaseLives();
+            Scene scene = SceneManager.GetActiveScene();
+            SceneManager.LoadScene(scene.name);
+            yield return new WaitForSeconds(1);
+            removingLife = false;
         }
         
     }
