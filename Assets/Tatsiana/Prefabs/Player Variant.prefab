@@ -30,6 +30,7 @@ MonoBehaviour:
   fallMultiplier: 3
   lowJumpMultiplier: 2.5
   glidingSpeed: 2
+  isCollideBox: 0
 --- !u!1001 &802056608272147462
 PrefabInstance:
   m_ObjectHideFlags: 0
