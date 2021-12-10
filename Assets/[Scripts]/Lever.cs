@@ -61,21 +61,11 @@ public class Lever : MonoBehaviour
             {
                 if (isFanning)
                 {
-<<<<<<< Updated upstream
                     StopFan();
                 }
                 else
                 {
                     StartFan();
-=======
-                    FindObjectOfType<Sound_Manager>().Play("fan");
-                    activeImg.sprite = imgOn;
-                }
-                else
-                {
-                    FindObjectOfType<Sound_Manager>().Stop("fan");
-                    activeImg.sprite = imgOff;
->>>>>>> Stashed changes
                 }
 
             }
