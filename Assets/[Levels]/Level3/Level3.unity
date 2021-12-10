@@ -76680,6 +76680,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1720111300, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+    - target: {fileID: 1720111301, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
+      propertyPath: UVModule.mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720111301, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
+      propertyPath: UVModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1720111301, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
+      propertyPath: UVModule.sprites.Array.data[0].sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 57505f9a643084c45b23c342cbf36972, type: 3}
     - target: {fileID: 9161066600407121225, guid: a9650c4d30dcc7f498661f8ec4294e5b, type: 3}
       propertyPath: glidingSpeed
       value: 3
