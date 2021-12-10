@@ -7,7 +7,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     public Transform returnPosition;
     public Transform startPosition;
-    public int speed = 1;
+    public float speed = 1f;
     public bool isFacingLeft;
     public bool justTurned;
     PlayerLivesTracker livesTracker;
